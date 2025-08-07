@@ -1,18 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechApp</title>
-
-  <!-- Fuente Orbitron para títulos y Inter para texto -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Estilos personalizados -->
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechApp</title>
+<!-- Fuente Orbitron para títulos y Inter para texto -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Estilos personalizados -->
+<style>
     .font-orbitron { font-family: 'Orbitron', sans-serif; }
     .font-inter { font-family: 'Inter', sans-serif; }
 
@@ -47,126 +45,117 @@
 
   </style>
 </head>
-
 <body class="bg-gray-50 min-h-screen flex flex-col font-inter">
-  <!-- Pantalla de Inicio -->
-  <div id="home-screen" class="min-h-screen bg-gradient-primary flex flex-col justify-center items-center text-center p-6">
-    <div class="bg-white rounded-3xl shadow-lg p-8 w-full max-w-md animate-fade-in">
-      <h1 class="text-5xl font-bold font-orbitron bg-gradient-primary bg-clip-text text-transparent mb-4">
+<!-- Pantalla de Inicio -->
+<div class="min-h-screen bg-gradient-primary flex flex-col justify-center items-center text-center p-6" id="home-screen">
+<div class="bg-white rounded-3xl shadow-lg p-8 w-full max-w-md animate-fade-in">
+<h1 class="text-5xl font-bold font-orbitron bg-gradient-primary bg-clip-text text-transparent mb-4">
         TechApp
       </h1>
-      <p class="mb-6 text-lg text-gray-700 tracking-wide">
+<p class="mb-6 text-lg text-gray-700 tracking-wide">
         Explora, aprende y crea con tecnología real
       </p>
-      <img src="img/LOGO.png" alt="Tecnología en el aula" class="w-48 mx-auto mb-6 rounded-2xl shadow-lg">
-      <div class="bg-gray-100 text-gray-700 text-sm p-3 rounded-lg mb-6 border border-gray-300">
+<img alt="Tecnología en el aula" class="w-48 mx-auto mb-6 rounded-2xl shadow-lg" src="img/LOGO.png"/>
+<div class="bg-gray-100 text-gray-700 text-sm p-3 rounded-lg mb-6 border border-gray-300">
         Esta aplicación complementa el trabajo del aula, ofreciendo materiales interactivos y retos que pueden adaptarse a distintas metodologías y necesidades educativas.
+
       </div>
-      <div class="grid grid-cols-1 gap-4">
-        <button onclick="showCourseTopics('1eso')" class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+<div class="grid grid-cols-1 gap-4">
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('1eso')">
           1º ESO - Tecnología y Digitalización
         </button>
-        <button onclick="showCourseTopics('3eso')" class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('3eso')">
           3º ESO - Tecnología y Digitalización
         </button>
-        <button onclick="showCourseTopics('4eso')" class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('4eso')">
           4º ESO - Tecnología y Digitalización
         </button>
-        <button onclick="showCourseTopics('1bachillerato')" class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('1bachillerato')">
           1º Bachillerato - Tecnología
         </button>
-        <button onclick="showCourseTopics('2bachillerato')" class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('2bachillerato')">
           2º Bachillerato - Tecnología
         </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====================== PANTALLA LISTA DE TEMAS ====================== -->
-  <div id="topics-screen" class="hidden p-6 space-y-4">
-    <button onclick="showHome()" class="text-secondary hover:text-pink-500 flex items-center gap-2 transition">
+</div>
+</div>
+</div>
+<!-- ====================== PANTALLA LISTA DE TEMAS ====================== -->
+<div class="hidden p-6 space-y-4" id="topics-screen">
+<button class="text-secondary hover:text-pink-500 flex items-center gap-2 transition" onclick="showHome()">
       Volver
     </button>
-    <h2 id="course-title" class="text-2xl font-orbitron font-bold text-gray-800"></h2>
-    <div id="topics-container" class="space-y-3">
-      <!-- Tarjetas genéricas para todos los temas -->
-      <div class="topic-card border-l-4 border-primary rounded shadow-sm p-4 bg-white hover:shadow-md transition">
-        <span class="topic-title">Título del Tema</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====================== PANTALLA DETALLE DEL TEMA ====================== -->
-  <div id="topic-screen" class="hidden min-h-screen bg-gray-50">
-    <div class="sticky top-0 bg-white shadow p-4 text-center relative">
-      <button onclick="showTopics()" 
-        class="absolute left-4 top-4 flex items-center gap-2 text-purple-600 hover:text-pink-500 transition">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M15 19l-7-7 7-7" />
-        </svg>
+<h2 class="text-2xl font-orbitron font-bold text-gray-800" id="course-title"></h2>
+<div class="space-y-3" id="topics-container">
+<!-- Tarjetas genéricas para todos los temas -->
+<div class="topic-card border-l-4 border-primary rounded shadow-sm p-4 bg-white hover:shadow-md transition">
+<span class="topic-title">Título del Tema</span>
+</div>
+</div>
+</div>
+<!-- ====================== PANTALLA DETALLE DEL TEMA ====================== -->
+<div class="hidden min-h-screen bg-gray-50" id="topic-screen">
+<div class="sticky top-0 bg-white shadow p-4 text-center relative">
+<button class="absolute left-4 top-4 flex items-center gap-2 text-purple-600 hover:text-pink-500 transition" onclick="showTopics()">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7"></path>
+</svg>
         Temas
       </button>
-      <h2 id="topic-title" class="font-orbitron text-xl font-extrabold text-gray-800"></h2>
-    </div>
-
+<h2 class="font-orbitron text-xl font-extrabold text-gray-800" id="topic-title"></h2>
+</div>
 <!-- Barra de pasos corregida: 6 botones igual de anchos y onclick bien asignados -->
 <div class="relative mt-4">
-  <div class="step-line absolute inset-x-0 top-5 h-0.5 bg-gray-300"></div>
-  <div class="flex justify-between relative z-10 px-4">
-    <button onclick="showIntro()"       class="text-center w-1/6">
-      <div id="step-intro"     class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold">1</div>
-      <span class="text-xs mt-1 block">Introducción</span>
-    </button>
-    <button onclick="showSummary()"     class="text-center w-1/6">
-      <div id="step-summary"   class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">2</div>
-      <span class="text-xs mt-1 block">Resumen</span>
-    </button>
-    <button onclick="showDevelopment()" class="text-center w-1/6">
-      <div id="step-development" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">3</div>
-      <span class="text-xs mt-1 block">Desarrollo</span>
-    </button>
-    <button onclick="showNews()"        class="text-center w-1/6">
-      <div id="step-news"      class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">4</div>
-      <span class="text-xs mt-1 block">Noticias</span>
-    </button>
-    <button onclick="showChallenge()"   class="text-center w-1/6">
-      <div id="step-challenge" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">5</div>
-      <span class="text-xs mt-1 block">Reto</span>
-    </button>
-    <button onclick="showQuiz()"        class="text-center w-1/6">
-      <div id="step-quiz"      class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">6</div>
-      <span class="text-xs mt-1 block">Quiz</span>
-    </button>
-  </div>
+<div class="step-line absolute inset-x-0 top-5 h-0.5 bg-gray-300"></div>
+<div class="flex justify-between relative z-10 px-4">
+<button class="text-center w-1/6" onclick="showIntro()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold" id="step-intro">1</div>
+<span class="text-xs mt-1 block">Introducción</span>
+</button>
+<button class="text-center w-1/6" onclick="showSummary()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold" id="step-summary">2</div>
+<span class="text-xs mt-1 block">Resumen</span>
+</button>
+<button class="text-center w-1/6" onclick="showDevelopment()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold" id="step-development">3</div>
+<span class="text-xs mt-1 block">Desarrollo</span>
+</button>
+<button class="text-center w-1/6" onclick="showNews()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold" id="step-news">4</div>
+<span class="text-xs mt-1 block">Noticias</span>
+</button>
+<button class="text-center w-1/6" onclick="showChallenge()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold" id="step-challenge">5</div>
+<span class="text-xs mt-1 block">Reto</span>
+</button>
+<button class="text-center w-1/6" onclick="showQuiz()">
+<div class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold" id="step-quiz">6</div>
+<span class="text-xs mt-1 block">Quiz</span>
+</button>
 </div>
-
-
-    <!-- Contenido dinámico -->
-    <div class="p-4 max-w-3xl mx-auto">
-      <div id="section-content" class="fade-in"></div>
-    </div>
-  </div>
-
+</div>
+<!-- Contenido dinámico -->
+<div class="p-4 max-w-3xl mx-auto">
+<div class="fade-in" id="section-content"></div>
+</div>
+</div>
 <!-- Footer -->
 <footer class="bg-gray-900/95 border-t border-purple-500 text-white text-center text-sm p-3 mt-auto">
-  <p>
-    <a href="https://tecnohelmantica.github.io/Techapp-educacion/" class="text-blue-400 underline">TechApp</a> © 2025 by
-    <a href="https://github.com/tecnohelmantica" class="text-blue-400 underline">Tecnohelmantica</a> is licensed under
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-blue-400 underline">
+<p>
+<a class="text-blue-400 underline" href="https://tecnohelmantica.github.io/Techapp-educacion/">TechApp</a> © 2025 by
+    <a class="text-blue-400 underline" href="https://github.com/tecnohelmantica">Tecnohelmantica</a> is licensed under
+    <a class="text-blue-400 underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
     </a>
-    <span class="inline-flex items-center ml-2 space-x-1 align-middle">
-      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC" class="inline w-4 h-4">
-      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY" class="inline w-4 h-4">
-      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC" class="inline w-4 h-4">
-      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="SA" class="inline w-4 h-4">
-    </span>
-  </p>
+<span class="inline-flex items-center ml-2 space-x-1 align-middle">
+<img alt="CC" class="inline w-4 h-4" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"/>
+<img alt="BY" class="inline w-4 h-4" src="https://mirrors.creativecommons.org/presskit/icons/by.svg"/>
+<img alt="NC" class="inline w-4 h-4" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"/>
+<img alt="SA" class="inline w-4 h-4" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"/>
+</span>
+</p>
 </footer>
-
-
-  <!-- Script -->
-  <script>
+<!-- Script -->
+<script>
 const coursesData = {
   "1eso": {
     title: "1º ESO – Tecnología y Digitalización",
@@ -897,7 +886,8 @@ development: {
     "image": "img/tema7.jpg"
   },
 development: {
-          presentationIframe: "1ESO/Tema-Estructuras-y-mecanismos.pdf"
+          presentationIframe: "1ESO/Tema-Estructuras-y-mecanismos.pdf", 
+note: "Material de refuerzo elaborado por Pedro Landín – CPR Sagrado Corazón de Jesús (Pontevedra). Disponible en <a href='http://pelandintecno.blogspot.com' target='_blank'>pelandintecno.blogspot.com</a>"
         },
   "news": [
     {
@@ -2934,7 +2924,9 @@ development: {
     "image": "img/tema24.jpg"
   },
 development: {
-          presentationIframe: "4ESO/T4_Neumatica.pdf"
+          presentationIframe: "4ESO/T4_Neumatica.pdf",
+note: "Material de refuerzo elaborado por Pedro Landín – CPR Sagrado Corazón de Jesús (Pontevedra). Disponible en <a href='http://pelandintecno.blogspot.com' target='_blank'>pelandintecno.blogspot.com</a>"
+
         },
   "news": [
     {
@@ -3173,8 +3165,11 @@ development: {
     "image": "img/tema26.jpg"
   },
 development: {
-          presentationIframe: "4ESO/4º-ESO-TEMA-1-INSTALACIONES-EN-VIVIENDAS.pdf"
-        },
+  presentationIframe: "4ESO/4º-ESO-TEMA-1-INSTALACIONES-EN-VIVIENDAS.pdf",
+  note: "Material reutilizado del Departamento de Tecnología – IES Antonio Sequeros (IES Antonio Sequeros). " +
+        "Fuente: https://portal.edu.gva.es/iesantoniosequeros/organizacion/departamentos/tecnologia/ " +
+        "Licencia: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)."
+},
   "news": [
     {
       "titulo": "Comando Actualidad 5.0 - ¿Mi casa me espía?",
@@ -3564,10 +3559,9 @@ function showDevelopment() {
   const topic = getCurrentTopic();          // p.ej. topics[temaSeleccionado]
   updateStepColors('development');
 
-  // Obtenemos la URL de embed que guardamos en el JSON:
   const embedUrl = topic.development.presentationIframe;
+  const note = topic.development.note || "";
 
-  // Montamos SOLO el iframe + botón:
   const html = `
     <h3 class="text-2xl font-bold mb-4">Desarrollo del tema</h3>
     <div class="space-y-6">
@@ -3580,6 +3574,8 @@ function showDevelopment() {
           allowfullscreen
           title="Presentación del tema">
         </iframe>
+        ${note ? `<p class="text-sm text-gray-500 italic mt-4 text-center">${note}</p>
+` : ""}
       </section>
       <button
         onclick="markComplete('development')"
@@ -3861,10 +3857,11 @@ function markComplete(section) {
 
 /* Inicializar */
 document.addEventListener('DOMContentLoaded', showHome);
+document.getElementById('presentationFrame').src = tema.development.presentationIframe;
+document.getElementById('presentationNote').innerHTML = tema.development.note || "";
+
 
 
   </script>
 </body>
 </html>
-
-
