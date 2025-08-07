@@ -17,7 +17,9 @@ Incluye resúmenes, retos prácticos, noticias actuales y quizzes para motivar a
 
 ## 🎯 Objetivo
 
-Apoyar a docentes en la preparación de clases y ofrecer un recurso interactivo para repasar contenidos y aprender de forma autónoma.
+Apoyar a docentes en la preparación de clases y ofrecer al alumnado un recurso interactivo, motivador y accesible para repasar contenidos y aprender de forma autónoma.
+TechApp no sustituye las explicaciones ni la orientación del profesorado, sino que complementa el trabajo en el aula con recursos digitales que fomentan la participación activa y el aprendizaje competencial.
+
 
 ---
 
@@ -63,10 +65,17 @@ También puedes personalizar imágenes, colores o estilos con Tailwind CSS.
 
 ## 📄 Licencia
 
-Este recurso está bajo licencia CC BY-NC 4.0:
-✔️ Puedes usarlo y adaptarlo para fines educativos.
-📌 Debes citar la autoría original.
-❌ No está permitido su uso comercial.
+Este proyecto está licenciado bajo  
+**[Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)**.
+
+Esto significa que puedes:
+- ✅ **Copiar y redistribuir** el material en cualquier medio o formato.  
+- ✅ **Adaptarlo, remezclarlo y construir** a partir de él.  
+- ❌ **No puedes utilizarlo con fines comerciales.**  
+- 🔄 Si creas contenido derivado, debes distribuirlo bajo la **misma licencia**.  
+- 🧾 Siempre debes **dar crédito al autor original** (Tecnohelmantica), incluir un enlace a la licencia e indicar si realizas cambios.
+
+![Licencia CC BY-NC-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg)
 
 ---
 
@@ -81,9 +90,3 @@ Este recurso está bajo licencia CC BY-NC 4.0:
 
 > 💡 Enlace de demostración (una vez habilites GitHub Pages):  
 > [https://tecnohelmantica.github.io/Techapp-educacion](https://tecnohelmantica.github.io/Techapp-educacion)
-
-
----
-
-
-
