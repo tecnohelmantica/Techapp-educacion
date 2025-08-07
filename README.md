@@ -85,7 +85,5 @@ Este recurso está bajo licencia CC BY-NC 4.0:
 
 ---
 
-> 💡 Enlace de demostración (una vez habilites GitHub Pages):  
-> [https://tecnohelmantica.github.io/Techapp-educacion](https://tecnohelmantica.github.io/Techapp-educacion)
 
 
