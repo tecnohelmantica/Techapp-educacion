@@ -46,7 +46,6 @@ Para editar los contenidos:
 1. Abre el archivo `index.html`.
 2. Busca la sección que comienza con:
 
-```js
 const coursesData = {
   "1eso": {
     title: "1º ESO – Tecnología y Digitalización",
@@ -55,6 +54,7 @@ const coursesData = {
     ]
   }
 }
+
 3. Modifica los temas, descripciones, retos o quizzes dentro de cada curso.
 
 También puedes personalizar imágenes, colores o estilos con Tailwind CSS.
@@ -81,4 +81,11 @@ Este recurso está bajo licencia CC BY-NC 4.0:
 
 > 💡 Enlace de demostración (una vez habilites GitHub Pages):  
 > [https://tecnohelmantica.github.io/Techapp-educacion](https://tecnohelmantica.github.io/Techapp-educacion)
+
+
+---
+
+> 💡 Enlace de demostración (una vez habilites GitHub Pages):  
+> [https://tecnohelmantica.github.io/Techapp-educacion](https://tecnohelmantica.github.io/Techapp-educacion)
+
 
