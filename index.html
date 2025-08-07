@@ -37,6 +37,14 @@
     .bg-gradient-primary { background-image: linear-gradient(to right, #a855f7, #ec4899); }
     .text-secondary { color: #22d3ee; }
     .border-primary { border-color: #a855f7; }
+
+.presentation-iframe {
+  width: 700px;
+  max-width: 100%;
+  height: 450px;
+  border: none;
+}
+
   </style>
 </head>
 
@@ -50,7 +58,7 @@
       <p class="mb-6 text-lg text-gray-700 tracking-wide">
         Explora, aprende y crea con tecnología real
       </p>
-      <img src="img/LOGO.png" alt="Tecnología en el aula" class="w-48 mx-auto mb-6 rounded-2xl shadow-lg">
+      <img src="img/logo.png" alt="Tecnología en el aula" class="w-48 mx-auto mb-6 rounded-2xl shadow-lg">
       <div class="bg-gray-100 text-gray-700 text-sm p-3 rounded-lg mb-6 border border-gray-300">
         Esta aplicación se ha diseñado como un recurso complementario para facilitar el aprendizaje y apoyar la labor del profesorado. En ningún caso sustituye los materiales, explicaciones ni orientaciones proporcionadas en clase.
       </div>
@@ -101,32 +109,37 @@
       <h2 id="topic-title" class="font-orbitron text-xl font-extrabold text-gray-800"></h2>
     </div>
 
-    <!-- Barra de pasos -->
-    <div class="relative mt-4">
-      <div class="step-line absolute inset-x-0 top-5 h-0.5 bg-gray-300"></div>
-      <div class="flex justify-between relative z-10 px-4">
-        <button onclick="showIntro()" class="text-center w-1/5">
-          <div id="step-intro" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold transition">1</div>
-          <span class="text-xs mt-1 block">Introducción</span>
-        </button>
-        <button onclick="showSummary()" class="text-center w-1/5">
-          <div id="step-summary" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold transition">2</div>
-          <span class="text-xs mt-1 block">Resumen</span>
-        </button>
-        <button onclick="showNews()" class="text-center w-1/5">
-          <div id="step-news" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold transition">3</div>
-          <span class="text-xs mt-1 block">Noticias</span>
-        </button>
-        <button onclick="showChallenge()" class="text-center w-1/5">
-          <div id="step-challenge" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold transition">4</div>
-          <span class="text-xs mt-1 block">Reto</span>
-        </button>
-        <button onclick="showQuiz()" class="text-center w-1/5">
-          <div id="step-quiz" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold transition">5</div>
-          <span class="text-xs mt-1 block">Quiz</span>
-        </button>
-      </div>
-    </div>
+<!-- Barra de pasos corregida: 6 botones igual de anchos y onclick bien asignados -->
+<div class="relative mt-4">
+  <div class="step-line absolute inset-x-0 top-5 h-0.5 bg-gray-300"></div>
+  <div class="flex justify-between relative z-10 px-4">
+    <button onclick="showIntro()"       class="text-center w-1/6">
+      <div id="step-intro"     class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold">1</div>
+      <span class="text-xs mt-1 block">Introducción</span>
+    </button>
+    <button onclick="showSummary()"     class="text-center w-1/6">
+      <div id="step-summary"   class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">2</div>
+      <span class="text-xs mt-1 block">Resumen</span>
+    </button>
+    <button onclick="showDevelopment()" class="text-center w-1/6">
+      <div id="step-development" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">3</div>
+      <span class="text-xs mt-1 block">Desarrollo</span>
+    </button>
+    <button onclick="showNews()"        class="text-center w-1/6">
+      <div id="step-news"      class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">4</div>
+      <span class="text-xs mt-1 block">Noticias</span>
+    </button>
+    <button onclick="showChallenge()"   class="text-center w-1/6">
+      <div id="step-challenge" class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">5</div>
+      <span class="text-xs mt-1 block">Reto</span>
+    </button>
+    <button onclick="showQuiz()"        class="text-center w-1/6">
+      <div id="step-quiz"      class="w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold">6</div>
+      <span class="text-xs mt-1 block">Quiz</span>
+    </button>
+  </div>
+</div>
+
 
     <!-- Contenido dinámico -->
     <div class="p-4 max-w-3xl mx-auto">
@@ -179,6 +192,9 @@ const coursesData = {
   ],
   "image": "img/tema1.jpg"
 },
+development: {
+          presentationIframe: "1ESO/Tema-Evaluacion-a-traves-del-portafolio-y-comunicacion-visual.pdf" 
+        },
   "news": [
     {
       "titulo": "Evaluar con dosier o portfolio de aprendizaje",
@@ -295,6 +311,10 @@ const coursesData = {
   ],
   "image": "img/tema2.jpg"
 },
+development: {
+          presentationIframe: "1ESO/Tema-Hardware-y-software.pdf" 
+        },
+
   "news": [
     {
       "titulo": "Cataluña prohíbe el uso de móviles y relojes inteligentes en las aulas",
@@ -399,6 +419,9 @@ const coursesData = {
     ],
     "image": "img/tema3.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Tema-Que-es-la-tecnologia-y-como-nos-ayuda-Tecnologia-sostenible.pdf" 
+        },
   "news": [
     {
       "titulo": "¿Qué es la obsolescencia programada?",
@@ -515,6 +538,10 @@ const coursesData = {
     ],
     "image": "img/tema4.jpg"
   },
+development: {
+          presentationIframe: "1ESOTema-Proceso-tecnologico-y-representacion.pdf"
+        },
+
   "news": [
     {
       "titulo": "Prohibido no tener ideas locas en clase",
@@ -620,6 +647,9 @@ const coursesData = {
     ],
     "image": "img/tema5.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Materiales-y-sostenibilidad.pdf"
+        },
     "news": [
     {
       "titulo": "Más cerca – Reciclaje de residuos tecnológicos",
@@ -735,6 +765,10 @@ const coursesData = {
     ],
     "image": "img/tema6.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Tema-Diseno-2D-y-3D.pdf"
+        },
+
   "news": [
     {
       "titulo": "COGITISE acerca la ingeniería a las aulas de 3.500 jóvenes sevillanos",
@@ -850,6 +884,9 @@ const coursesData = {
     ],
     "image": "img/tema7.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Tema-Estructuras-y-mecanismos.pdf"
+        },
   "news": [
     {
       "titulo": "500 alumnos de la ESO compiten en el Iturrama Paper Bridge",
@@ -965,6 +1002,10 @@ const coursesData = {
     ],
     "image": "img/tema8.jpg"
   },
+development: {
+          presentationIframe: "file:1ESO/Tema-Electricidad-basica.pdf"
+        },
+
   "news": [
     {
       "titulo": "Aprendemos en Clan – ¡Electricidad!",
@@ -1082,6 +1123,9 @@ const coursesData = {
     ],
     "image": "img/tema9.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Tema-Ciudadania-y-seguridad-digital.pdf"
+        },
   "news": [
     {
       "titulo": "La Junta promueve el uso responsable de las tecnologías con motivo del Día de la Internet Segura",
@@ -1197,6 +1241,9 @@ const coursesData = {
     ],
     "image": "img/tema10.jpg"
   },
+development: {
+          presentationIframe: "1ESO/Tema-Pensamiento-computacional-programacion-basica-y-IoT.pdf"
+        },
   "news": [
     {
       "titulo": "MicroBlocks: la plataforma gratuita para programar una placa micro:bit mediante bloques",
@@ -3270,7 +3317,7 @@ const coursesData = {
     /* === VARIABLES GLOBALES === */
     let currentCourse = '';
     let currentTopic = '';
-    let progress = { intro: false, summary: false, news: false, challenge: false };
+    let progress = { intro: false, summary: false, development: false, news: false, challenge: false };
     let visitedNews = [];
     let quizScore = 0;
     let quizAnswered = 0;
@@ -3326,7 +3373,7 @@ function showTopics() {
 /* === RENDERIZAR SECCIONES === */
 function showTopicContent(topicId) {
   currentTopic = topicId;
-  progress = { intro: false, summary: false, news: false, challenge: false };
+  progress = { intro: false, summary: false, development: false, news: false, challenge: false };
   document.getElementById('topics-screen').classList.add('hidden');
   document.getElementById('topic-screen').classList.remove('hidden');
   const topic = getCurrentTopic();
@@ -3340,9 +3387,10 @@ function getCurrentTopic() {
 }
 
 function updateStepColors(active) {
-  const steps = ['intro', 'summary', 'news', 'challenge', 'quiz'];
+  const steps = ['intro','summary','development','news','challenge','quiz'];
   steps.forEach(step => {
     const el = document.getElementById(`step-${step}`);
+    if (!el) return;
     if (step === active) {
       el.className =
         'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold';
@@ -3355,6 +3403,8 @@ function updateStepColors(active) {
     }
   });
 }
+
+
 
 /* === INTRO === */
 function showIntro() {
@@ -3444,13 +3494,56 @@ function showSummary() {
   `;
 }
 
+function showDevelopment() {
+  const topic = getCurrentTopic();          // p.ej. topics[temaSeleccionado]
+  updateStepColors('development');
+
+  // Obtenemos la URL de embed que guardamos en el JSON:
+  const embedUrl = topic.development.presentationIframe;
+
+  // Montamos SOLO el iframe + botón:
+  const html = `
+    <h3 class="text-2xl font-bold mb-4">Desarrollo del tema</h3>
+    <div class="space-y-6">
+      <section>
+        <h4 class="text-xl font-semibold mb-2">Presentación</h4>
+        <iframe
+          src="${embedUrl}"
+          class="presentation-iframe"
+          frameborder="0"
+          allowfullscreen
+          title="Presentación del tema">
+        </iframe>
+      </section>
+      <button
+        onclick="markComplete('development')"
+        class="mt-6 mx-auto block
+               bg-gradient-to-r from-purple-500 to-pink-500
+               text-white px-6 py-3 rounded-xl font-semibold
+               hover:scale-105 transition-transform">
+        He entendido esta sección
+      </button>
+    </div>
+  `;
+
+  document.getElementById('section-content').innerHTML = html;
+}
+
+
+
+
+
+
 /* === NEWS === */
 function showNews() {
   if (!progress.summary) {
     alert('Completa el resumen primero.');
     return;
   }
-
+if (!progress.development) {
+    alert('Lee y comprende el desarrollo del tema antes de ir a Noticias.');
+    return;
+  }
   const topic = getCurrentTopic();
   updateStepColors('news');
 
@@ -3675,20 +3768,35 @@ function checkAnswer(button, isCorrect) {
 }
 
 function markComplete(section) {
+  // 1) Asegurarnos de que existe esa clave en progress
+  if (!progress.hasOwnProperty(section)) return;
+  
+  // 2) Marcar como completado
   progress[section] = true;
+  
+  // 3) Repintar los círculos 
+  updateStepColors(section);
 
+  // 4) Saltar al siguiente paso
   if (section === 'intro') {
     showSummary();
   } else if (section === 'summary') {
-    showNews();
+    showDevelopment();
+  } else if (section === 'development') {
+    showNews();      // ← Aquí hacemos el salto a Noticias
+  } else if (section === 'news') {
+    showChallenge();
+  } else if (section === 'challenge') {
+    showQuiz();
   }
 }
+
+
 
 /* Inicializar */
 document.addEventListener('DOMContentLoaded', showHome);
 
-    document.addEventListener('DOMContentLoaded', showHome);
+
   </script>
 </body>
 </html>
-
