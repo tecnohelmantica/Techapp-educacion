@@ -43,6 +43,47 @@
   border: none;
 }
 
+/* Listas dentro del contenido */
+#section-content ul,
+#section-content ol {
+  list-style-position: outside;
+  padding-left: 1.25rem !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  margin-bottom: 0.75rem; /* espacio inferior reducido */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Viñetas y numeración */
+#section-content ul {
+  list-style-type: disc !important;   /* puntos */
+}
+
+#section-content ol {
+  list-style-type: decimal !important; /* números */
+}
+
+/* Quitar margen superior solo cuando la lista sigue a un <strong> */
+#section-content strong + ul,
+#section-content strong + ol {
+  margin-top: 0;
+}
+
+#section-content li {
+  margin: 0.15rem 0;
+}
+
+#section-content .summary-body > * + * {
+  margin-top: 0 !important;
+}
+
+/* Y por si acaso, cuando una lista sigue a un <strong>, que no tenga margen */
+#section-content strong + ul,
+#section-content strong + ol {
+  margin-top: 0 !important;
+}
+
+
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col font-inter">
@@ -183,7 +224,7 @@ const coursesData = {
     ]
   },
 "summary": {
-  "texto": "En este tema, los alumnos se adentrarán en la creación y gestión de un portafolio digital que refleje su proceso de aprendizaje, logros académicos y habilidades desarrolladas.<br>El portafolio se concibe como un repositorio organizado de evidencias: trabajos escritos, proyectos multimedia, reflexiones personales y autoevaluaciones que ilustran la adquisición de competencias.<br>La infografía complementaria permite sintetizar de forma visual la información clave, facilitando tanto la comprensión del contenido como la presentación a terceros.<br><br>Proceso de elaboración del portafolio:<br>- Selección de evidencias: elegir documentos y recursos (texto, imágenes, vídeos) representativos de los criterios de evaluación.<br>- Organización y estructura: clasificar las evidencias por unidades temáticas o competencias, añadiendo títulos descriptivos y fechas.<br>- Diseño visual coherente: aplicar tipografías legibles, colores consistentes y espacios en blanco para mejorar la legibilidad.<br>- Aplicar la guía de criterios de clase para revisar cada trabajo y anotar cómo puedes mejorarlo.<br>- Revisión y feedback: realizar una autoevaluación y solicitar retroalimentación de pares y del docente antes de la entrega final.<br><br>Creación de la infografía:<br>- Definición de objetivos: decidir si se quiere resaltar el progreso, resultados cuantitativos o reflexiones cualitativas.<br>- Recopilación de datos: extraer estadísticas (número de proyectos, horas dedicadas, calificaciones) y puntos clave de las evidencias.<br>- Selección de formato gráfico: líneas de tiempo para procesos, diagramas de flujo para metodologías o gráficos de barras para comparaciones.<br>- Herramientas digitales recomendadas: Canva (plantillas gratuitas), Genially (interactividad básica) y PowerPoint (flexibilidad de edición).<br>- Exportación y difusión: generar versión PDF para impresión o enlace web para compartir en la plataforma educativa.<br><br>Ejemplo práctico:<br>Imagina una infografía sobre tu competencia digital:<br>1. Línea de tiempo con hitos: primer blog, primer vídeo, trabajo colaborativo.<br>2. Gráfico de sectores indicando porcentaje de actividades individuales y grupales.<br>3. Iconos personalizados y leyendas cortas para explicar cada sección.<br>4. Enlace QR al portafolio completo para facilitar el acceso.<br><br><strong>Glosario:</strong><br>- Portafolio: colección digital organizada de trabajos y reflexiones.<br>- Rúbrica: herramienta de evaluación con criterios e indicadores detallados.<br>- Infografía: representación gráfica que sintetiza información compleja.<br>- Metacognición: reflexión sobre el propio proceso de aprendizaje.<br><br>Además, el portafolio digital fomenta la autonomía del alumnado y la metacognición, mientras que la infografía desarrolla habilidades de comunicación visual y síntesis, imprescindibles en la era digital.<br>",
+  "texto": "En este tema, los alumnos se adentrarán en la creación y gestión de un portafolio digital que refleje su proceso de aprendizaje, logros académicos y habilidades desarrolladas.<br>El portafolio se concibe como un repositorio organizado de evidencias: trabajos escritos, proyectos multimedia, reflexiones personales y autoevaluaciones que ilustran la adquisición de competencias.<br>La infografía complementaria permite sintetizar de forma visual la información clave, facilitando tanto la comprensión del contenido como la presentación a terceros.<br><br><strong>Proceso de elaboración del portafolio:</strong><br><ul><li>Selección de evidencias: elegir documentos y recursos (texto, imágenes, vídeos) representativos de los criterios de evaluación.</li><li>Organización y estructura: clasificar las evidencias por unidades temáticas o competencias, añadiendo títulos descriptivos y fechas.</li><li>Diseño visual coherente: aplicar tipografías legibles, colores consistentes y espacios en blanco para mejorar la legibilidad.</li><li>Evaluación: aplicar la guía de criterios de clase para revisar cada trabajo y anotar cómo puedes mejorarlo.</li><li>Revisión y feedback: realizar una autoevaluación y solicitar retroalimentación de pares y del docente antes de la entrega final.</li></ul><br><strong>Creación de la infografía:</strong><br><ul><li>Definición de objetivos: decidir si se quiere resaltar el progreso, resultados cuantitativos o reflexiones cualitativas.</li><li>Recopilación de datos: extraer estadísticas (número de proyectos, horas dedicadas, calificaciones) y puntos clave de las evidencias.</li><li> Selección de formato gráfico: líneas de tiempo para procesos, diagramas de flujo para metodologías o gráficos de barras para comparaciones.</li></ul><br><strong>Herramientas digitales recomendadas</strong>: Canva (plantillas gratuitas), Genially (interactividad básica) y PowerPoint (flexibilidad de edición).<br><br><strong>Exportación y difusión</strong>: generar versión PDF para impresión o enlace web para compartir en la plataforma educativa.<br><br><strong>Glosario:</strong><br><ul><li> Portafolio: colección digital organizada de trabajos y reflexiones.</li><li>Rúbrica: herramienta de evaluación con criterios e indicadores detallados.</li><li>Infografía: representación gráfica que sintetiza información compleja.</li><li>Metacognición: reflexión sobre el propio proceso de aprendizaje.</li></ul><br>Además, el portafolio digital fomenta la autonomía del alumnado y la metacognición, mientras que la infografía desarrolla habilidades de comunicación visual y síntesis, imprescindibles en la era digital.<br><br>",
   "puntos": [
     "Comprender qué es un portafolio y su papel en el aprendizaje.",
     "Identificar y organizar diferentes tipos de evidencias.",
@@ -302,7 +343,7 @@ development: {
     ]
   },
 "summary": {
-  "texto": "En este tema vais a aprender qué es el hardware y el software de un ordenador y por qué son importantes para que vuestros dispositivos funcionen correctamente.<br>El hardware son las partes físicas que podéis ver y tocar (placa base, CPU, memoria, disco duro, pantalla, teclado…).<br>El software es el conjunto de programas y aplicaciones que indican al hardware cómo realizar tareas (sistema operativo, navegador, editor de texto…).<br><br>Cómo trabajar el tema:<br>- Definición y ejemplos de componentes internos y externos.<br>- Actividad práctica: desmontar un ordenador virtual o real y nombrar cada pieza.<br>- Instalación y desinstalación de software: paso a paso con capturas de pantalla.<br>- Buenas prácticas de mantenimiento: limpieza de polvo, comprobación de cables y ventiladores.<br>- Actualizaciones: qué son, por qué son necesarias y cómo instalarlas.<br><br>Riesgos y seguridad:<br>- Principales amenazas: virus, troyanos, phishing y ransomware.<br>- Protección básica: uso de antivirus, contraseñas seguras y bloqueo de pantalla.<br>- Organización de archivos: creación de carpetas lógicas y copias de seguridad en la nube o disco externo.<br><br>Ejemplo práctico:<br>Supongamos que queréis mejorar el rendimiento de vuestro PC:<br>1. Localizad archivos antiguos y movedlos a “Archivos antiguos”.<br>2. Desinstalad programas que ya no uséis desde “Panel de control”.<br>3. Ejecutad la herramienta de liberación de espacio y, si hace falta, el desfragmentador.<br>4. Actualizad el sistema operativo y el antivirus antes de apagar el equipo.<br><br><strong>Glosario:</strong><br>- CPU: unidad central de proceso, el “cerebro” del ordenador.<br>- Sistema operativo: software principal que gestiona recursos y programas.<br>- Malware: software malicioso que daña o roba información.<br>- Copia de seguridad: copia de datos para recuperarlos si los perdéis.<br><br>Al completar el tema, sabréis distinguir hardware de software, mantener vuestros dispositivos seguros y organizar vuestros archivos para que el ordenador funcione de forma eficiente.",
+  "texto": "En este tema vais a aprender qué es el hardware y el software de un ordenador y por qué son importantes para que vuestros dispositivos funcionen correctamente.<br>El <strong>hardware</strong> son las partes físicas que podéis ver y tocar (placa base, CPU, memoria, disco duro, pantalla, teclado…).<br>El <strong>software</strong> es el conjunto de programas y aplicaciones que indican al hardware cómo realizar tareas (sistema operativo, navegador, editor de texto…).<br><br><strong>Cómo trabajar el tema:</strong><ul><li>Definición y ejemplos de componentes internos y externos.</li><li>Actividad práctica: desmontar un ordenador virtual o real y nombrar cada pieza.</li><li>Instalación y desinstalación de software: paso a paso con capturas de pantalla.</li><li>Buenas prácticas de mantenimiento: limpieza de polvo, comprobación de cables y ventiladores.</li><li>Actualizaciones: qué son, por qué son necesarias y cómo instalarlas.</li></ul><br><br><strong>Riesgos y seguridad:</strong><ul><li>Principales amenazas: virus, troyanos, phishing y ransomware.</li><li>Protección básica: uso de antivirus, contraseñas seguras y bloqueo de pantalla.</li><li>Organización de archivos: creación de carpetas lógicas y copias de seguridad en la nube o disco externo.<br><br><strong>Ejemplo práctico:</strong><br>Supongamos que queréis mejorar el rendimiento de vuestro PC:<br>1. Localizad archivos antiguos y movedlos a “Archivos antiguos”.<br>2. Desinstalad programas que ya no uséis desde “Panel de control”.<br>3. Ejecutad la herramienta de liberación de espacio y, si hace falta, el desfragmentador.<br>4. Actualizad el sistema operativo y el antivirus antes de apagar el equipo.<br><br><strong>Glosario:</strong><ul><li>CPU: unidad central de proceso, el “cerebro” del ordenador.</li><li>Sistema operativo: software principal que gestiona recursos y programas.</li><li>Malware: software malicioso que daña o roba información.</li><li>Copia de seguridad: copia de datos para recuperarlos si los perdéis.</li></ul><br>Al completar el tema, sabréis distinguir hardware de software, mantener vuestros dispositivos seguros y organizar vuestros archivos para que el ordenador funcione de forma eficiente.<br><br>",
   "puntos": [
     "Identificar componentes de hardware interno y externo.",
     "Instalar y desinstalar software básico correctamente.",
@@ -410,7 +451,7 @@ development: {
     ]
   },
   "summary": {
-    "texto": "En este tema vas a descubrir qué entendemos por tecnología y cómo evaluar su impacto en tu vida y en el planeta.<br>Empezaremos por definir la tecnología como el conjunto de herramientas, máquinas y métodos diseñados para solucionar problemas: desde la palanca hasta el smartphone.<br>Verás ejemplos concretos de objetos cotidianos (linterna, bicicleta con luces, cargador de móvil) y cómo funcionan por dentro.<br><br>Practicarás la búsqueda de información fiable: identificarás fuentes seguras y contrastarás datos antes de creer todo lo que ves en Internet.<br>Aprenderás a reconocer los riesgos (productos con fallos de seguridad, virus, fugas de datos) y buenas prácticas para proteger tus dispositivos: contraseñas robustas, actualizaciones periódicas y copias de seguridad.<br><br>Después, profundizaremos en la obsolescencia programada: entenderás por qué algunos aparatos se diseñan para durar poco y cómo esto genera más residuos electrónicos y afecta al medio ambiente.<br>Conocerás los principios de la economía circular: reuso, reparación y reciclaje, y verás ejemplos reales de empresas que fabrican con materiales biodegradables o facilitan piezas de repuesto.<br><br>Al final, serás capaz de idear mejoras sostenibles para un objeto tecnológico de uso diario: definirás las fases de reuso, reparación y reciclaje, y propondrás soluciones como fundas biodegradables o instrucciones de desmontaje fáciles.<br>Con estos aprendizajes, sabrás tomar decisiones tecnológicas más responsables y alargar la vida útil de tus dispositivos.",
+    "texto": "En este tema vas a descubrir qué entendemos por tecnología y cómo evaluar su impacto en tu vida y en el planeta.<br>Empezaremos por definir la <strong>tecnología</strong> como el conjunto de herramientas, máquinas y métodos diseñados para solucionar problemas: desde la palanca hasta el smartphone.<br><br>Verás ejemplos concretos de objetos cotidianos (linterna, bicicleta con luces, cargador de móvil) y cómo funcionan por dentro.<br><br>Practicarás la búsqueda de información fiable: identificarás fuentes seguras y contrastarás datos antes de creer todo lo que ves en Internet.<br><br>Aprenderás a reconocer los riesgos (productos con fallos de seguridad, virus, fugas de datos) y buenas prácticas para proteger tus dispositivos: contraseñas robustas, actualizaciones periódicas y copias de seguridad.<br><br>Después, profundizaremos en la obsolescencia programada: entenderás por qué algunos aparatos se diseñan para durar poco y cómo esto genera más residuos electrónicos y afecta al medio ambiente.<br><br>Conocerás los principios de la economía circular: reuso, reparación y reciclaje, y verás ejemplos reales de empresas que fabrican con materiales biodegradables o facilitan piezas de repuesto.<br><br>Al final, serás capaz de idear mejoras sostenibles para un objeto tecnológico de uso diario: definirás las fases de reuso, reparación y reciclaje, y propondrás soluciones como fundas biodegradables o instrucciones de desmontaje fáciles.<br>Con estos aprendizajes, sabrás tomar decisiones tecnológicas más responsables y alargar la vida útil de tus dispositivos.",
     "puntos": [
       "Comprender qué es la tecnología y conocer ejemplos reales.",
       "Buscar y seleccionar información fiable de forma crítica.",
@@ -507,116 +548,6 @@ development: {
         ]
       },
 {
-  "id": "proceso-tecnologico",
-  "title": "Proceso tecnológico y representación",
-  "description": "Aprender a identificar problemas, idear, planificar y documentar soluciones siguiendo un proceso ordenado, y a evaluarlas para mejorar.",
-  "image": "img/intro4.jpg",
-  "intro": {
-    "motivacion": "Saber cómo pasar de una idea a una solución tecnológica de forma ordenada y colaborativa.",
-    "curiosidad": "¿Qué pasos siguen los ingenieros y diseñadores para crear objetos útiles y sostenibles?",
-    "criterios": [
-"1.4 Redactar documentación de forma que se transmita la información técnica relativa a la solución creada de una manera organizada, utilizando medios digitales, como procesadores de textos y presentaciones a un nivel inicial.",
-      "2.1 Idear y diseñar soluciones originales y eficaces a problemas definidos, aplicando conceptos, técnicas y procedimientos interdisciplinares, así como criterios de sostenibilidad, con actitud emprendedora, perseverante y creativa.",
-      "2.2 Seleccionar, planificar y organizar los materiales y herramientas, así como las tareas necesarias para la construcción de una solución a un problema planteado, trabajando individualmente o en grupo de manera cooperativa y colaborativa.",
-      "2.3 Registrar descriptiva y documentalmente el compendio de tareas, materiales y herramientas que conforman la solución generada, empleando medios digitales.",
-"4.1 Representar y comunicar el proceso de creación de un producto desde su diseño hasta su difusión, elaborando documentación técnica y gráfica con la ayuda de herramientas digitales."
-    ],
-    "contenidos": [
-      "Fases del proceso tecnológico: identificación, ideación, planificación, documentación y evaluación.",
-      "Técnicas de representación gráfica básica (bocetos, esquemas).",
-      "Uso de herramientas digitales para registro y comunicación.",
-      "Métodos de evaluación y mejora basada en feedback."
-    ]
-  },
-  "summary": {
-    "texto": "En este tema vais a aprender a transformar una idea en una solución tecnológica organizada y efectiva, trabajando paso a paso y en equipo.<br>Primero, identificaréis el problema explorando vuestro entorno (por ejemplo, crear un portalápices con materiales reciclados). Analizaréis por qué es importante resolverlo y qué requisitos debe cumplir la solución.<br><br>Después, idearéis y diseñaréis varias propuestas: haréis bocetos a mano con papel y lápiz para visualizar distintas formas y medidas. Compararéis ideas y seleccionaréis la más viable.<br><br>A continuación, planificaréis los materiales, herramientas y tareas: crearéis una lista con las piezas necesarias (cartón, pegamento, tijeras) y asignaréis responsabilidades en el grupo.<br><br>Durante la documentación, registraréis cada paso con fotos, textos breves y vídeos en una carpeta digital: incluiréis la fecha, los nombres de los componentes y una breve descripción de lo que habéis hecho.<br><br>Por último, evaluaréis el prototipo probándolo con compañeros y el profesor. Recogeréis sus comentarios, identificaréis mejoras (¿funciona bien?, ¿es estable?) y planificaréis una iteración para perfeccionar el diseño.<br><br>Este proceso os enseñará a trabajar de forma creativa, a presentar vuestras ideas con claridad y a aprender de los errores. ¡Manos a la obra!<br>",
-    "puntos": [
-      "Aplicar cada fase del proceso tecnológico.",
-      "Realizar bocetos claros y compararlos.",
-      "Planificar recursos y tareas en equipo.",
-      "Documentar el proceso con medios digitales.",
-      "Evaluar y mejorar el prototipo según feedback."
-    ],
-    "image": "img/tema4.jpg"
-  },
-development: {
-          presentationIframe: "https://procomun.intef.es/ode/view/es_2024030712_9193408"
-        },
-
-  "news": [
-    {
-      "titulo": "Prohibido no tener ideas locas en clase",
-      "descripcion": "Cada vez más centros integran el emprendimiento como competencia clave, fomentando proyectos colaborativos y generación de ideas en el aula.",
-      "enlace": "https://elpais.com/espana/comunidad-valenciana/2025-04-12/prohibido-no-tener-ideas-locas-en-clase.html",
-      "pregunta": "¿Qué metodología promueven los centros según el artículo?",
-      "opciones": [
-        "El emprendimiento y proyectos colaborativos.",
-        "La memorización de contenidos.",
-        "El trabajo individual exclusivamente.",
-        "La enseñanza tradicional."
-      ],
-      "correcta": 0
-    },
-    {
-      "titulo": "La educación del futuro ya está aquí",
-      "descripcion": "LaCabina muestra avances tecnológicos como asistentes de IA y telepresencia holográfica para documentar y presentar proyectos educativos.",
-      "enlace": "https://elpais.com/tecnologia/2024-12-12/la-educacion-del-futuro-ya-esta-aqui.html",
-      "pregunta": "¿Qué herramienta permite la telepresencia en el aula?",
-      "opciones": [
-        "La telepresencia holográfica en 3D.",
-        "La pizarra de tiza tradicional.",
-        "El libro de texto impreso.",
-        "El proyector de diapositivas."
-      ],
-      "correcta": 0
-    }
-  ],
-  "challenge": {
-    "reto": "Elige un problema de la clase: identifica la necesidad, dibuja un boceto de tu solución, planifica materiales y tareas, documenta el proceso en un cuaderno digital, y evalúa el prototipo proponiendo una mejora.",
-    "image": "img/reto4.jpg",
-    "consejo": "1) Trabaja en grupo para definir el problema.<br>2) Usa lápiz y papel para tus primeros bocetos.<br>3) Sube fotos y descripciones a la plataforma digital.<br>4) Reúne feedback de tus compañeros y mejora tu diseño.",
-    "criterios": [
-      "Aplica al menos tres fases del proceso.",
-      "Incluye bocetos claros y descriptivos.",
-      "Registra el proceso con medios digitales.",
-      "Propone una mejora tras la evaluación."
-    ],
-    "tiempo": "3 sesiones"
-  },
-  "quiz": [
-    {
-      "pregunta": "¿Cuál es la primera fase del proceso tecnológico?",
-      "opciones": [
-        "Identificar el problema.",
-        "Construir el prototipo.",
-        "Vender el producto.",
-        "Ignorar la idea."
-      ],
-      "correcta": 0
-    },
-    {
-      "pregunta": "¿Para qué sirve un boceto?",
-      "opciones": [
-        "Para representar una idea antes de construirla.",
-        "Para esconder la solución.",
-        "Para copiar sin pensar.",
-        "Para hacer el trabajo más largo."
-      ],
-      "correcta": 0
-    },
-    {
-      "pregunta": "Después de probar un prototipo, ¿qué debes hacer?",
-      "opciones": [
-        "Evaluarlo y mejorar el diseño.",
-        "Venderlo sin revisar.",
-        "Olvidarlo en un cajón.",
-        "Esconderlo."
-      ],
-      "correcta": 0
-          }
-        ]
-      },
-{
   "id": "materiales-sostenibilidad",
   "title": "Materiales y sostenibilidad",
   "description": "Estudio de materiales comunes, incluyendo la madera, y cómo elegir y gestionar soluciones más sostenibles.",
@@ -638,7 +569,7 @@ development: {
     ]
   },
   "summary": {
-    "texto": "En este tema vais a aprender a distinguir y valorar los distintos materiales que forman los objetos tecnológicos, centrándonos en la madera como ejemplo de recurso renovable y analizando también el plástico, el metal y el vidrio según su resistencia, peso y durabilidad.<br><br>A continuación, estudiaremos los residuos de aparatos eléctricos y electrónicos (RAEE). Entenderéis qué significa ese acrónimo y por qué no se pueden tirar en la basura doméstica. Veremos todo el proceso de reciclaje: recogida en puntos limpios, transporte, separación de plásticos, metales y placas de circuito, y recuperación de materiales para fabricar nuevos productos.<br><br>Después, profundizaremos en el concepto de economía circular. Aprenderéis las tres fases clave —reducción, reutilización y reciclaje— y comprobaréis con ejemplos prácticos (por ejemplo, convertir una carcasa de móvil antigua en un soporte para lápices) cómo alargar la vida útil de los materiales y reducir residuos.<br><br>También conoceréis campañas y proyectos de sensibilización, como “Otro Final es Posible” en Castilla y León, que organiza talleres en centros escolares para fomentar la gestión responsable de los RAEE.<br><br>Por último, exploraremos innovaciones en materiales sostenibles: envases comestibles elaborados con algas, bioplásticos biodegradables y madera tratada con técnicas de bajo impacto. Evaluaremos sus ventajas y posibles limitaciones.<br><br>Al finalizar el tema, seréis capaces de elegir materiales respetuosos con el medio ambiente para vuestros proyectos, diseñar un plan de reciclaje de un dispositivo electrónico y justificar vuestras decisiones usando criterios de sostenibilidad y circularidad.",
+    "texto": "En este tema vais a aprender a distinguir y valorar los distintos materiales que forman los objetos tecnológicos, centrándonos en la madera como ejemplo de recurso renovable y analizando también el plástico, el metal y el vidrio según su resistencia, peso y durabilidad.<br><br>A continuación, estudiaremos los <strong>residuos de aparatos eléctricos y electrónicos (RAEE)</strong>. Entenderéis qué significa ese acrónimo y por qué no se pueden tirar en la basura doméstica. Veremos todo el proceso de reciclaje: recogida en puntos limpios, transporte, separación de plásticos, metales y placas de circuito, y recuperación de materiales para fabricar nuevos productos.<br><br>Después, profundizaremos en el concepto de economía circular. Aprenderéis las tres fases clave (reducción, reutilización y reciclaje) y comprobaréis con ejemplos prácticos (por ejemplo, convertir una carcasa de móvil antigua en un soporte para lápices) cómo alargar la vida útil de los materiales y reducir residuos.<br><br>También conoceréis campañas y proyectos de sensibilización, como “Otro Final es Posible” en Castilla y León, que organiza talleres en centros escolares para fomentar la gestión responsable de los RAEE.<br><br>Por último, exploraremos innovaciones en materiales sostenibles: envases comestibles elaborados con algas, bioplásticos biodegradables y madera tratada con técnicas de bajo impacto. Evaluaremos sus ventajas y posibles limitaciones.<br><br>Al finalizar el tema, seréis capaces de elegir materiales respetuosos con el medio ambiente para vuestros proyectos, diseñar un plan de reciclaje de un dispositivo electrónico y justificar vuestras decisiones usando criterios de sostenibilidad y circularidad.",
     "puntos": [
       "Reconocer los materiales tecnológicos más usados y sus características.",
       "Entender el proceso de reciclaje de RAEE paso a paso.",
@@ -735,6 +666,116 @@ development: {
         ]
       },
 {
+  "id": "proceso-tecnologico",
+  "title": "Proceso tecnológico y representación",
+  "description": "Aprender a identificar problemas, idear, planificar y documentar soluciones siguiendo un proceso ordenado, y a evaluarlas para mejorar.",
+  "image": "img/intro4.jpg",
+  "intro": {
+    "motivacion": "Saber cómo pasar de una idea a una solución tecnológica de forma ordenada y colaborativa.",
+    "curiosidad": "¿Qué pasos siguen los ingenieros y diseñadores para crear objetos útiles y sostenibles?",
+    "criterios": [
+"1.4 Redactar documentación de forma que se transmita la información técnica relativa a la solución creada de una manera organizada, utilizando medios digitales, como procesadores de textos y presentaciones a un nivel inicial.",
+      "2.1 Idear y diseñar soluciones originales y eficaces a problemas definidos, aplicando conceptos, técnicas y procedimientos interdisciplinares, así como criterios de sostenibilidad, con actitud emprendedora, perseverante y creativa.",
+      "2.2 Seleccionar, planificar y organizar los materiales y herramientas, así como las tareas necesarias para la construcción de una solución a un problema planteado, trabajando individualmente o en grupo de manera cooperativa y colaborativa.",
+      "2.3 Registrar descriptiva y documentalmente el compendio de tareas, materiales y herramientas que conforman la solución generada, empleando medios digitales.",
+"4.1 Representar y comunicar el proceso de creación de un producto desde su diseño hasta su difusión, elaborando documentación técnica y gráfica con la ayuda de herramientas digitales."
+    ],
+    "contenidos": [
+      "Fases del proceso tecnológico: identificación, ideación, planificación, documentación y evaluación.",
+      "Técnicas de representación gráfica básica (bocetos, esquemas).",
+      "Uso de herramientas digitales para registro y comunicación.",
+      "Métodos de evaluación y mejora basada en feedback."
+    ]
+  },
+  "summary": {
+    "texto": "En este tema vais a aprender a transformar una idea en una solución tecnológica organizada y efectiva, trabajando paso a paso y en equipo.<br><br>Primero, identificaréis el problema explorando vuestro entorno (por ejemplo, crear un portalápices con materiales reciclados). Analizaréis por qué es importante resolverlo y qué requisitos debe cumplir la solución.<br><br>Después, idearéis y diseñaréis varias propuestas: haréis bocetos a mano con papel y lápiz para visualizar distintas formas y medidas. Compararéis ideas y seleccionaréis la más viable.<br><br>A continuación, planificaréis los materiales, herramientas y tareas: crearéis una lista con las piezas necesarias (cartón, pegamento, tijeras) y asignaréis responsabilidades en el grupo.<br><br>Durante la documentación, registraréis cada paso con fotos, textos breves y vídeos en una carpeta digital: incluiréis la fecha, los nombres de los componentes y una breve descripción de lo que habéis hecho.<br><br>Por último, evaluaréis el prototipo probándolo con compañeros y el profesor. Recogeréis sus comentarios, identificaréis mejoras (¿funciona bien?, ¿es estable?) y planificaréis una iteración para perfeccionar el diseño.<br><br>Este proceso os enseñará a trabajar de forma creativa, a presentar vuestras ideas con claridad y a aprender de los errores. ¡Manos a la obra!<br>",
+    "puntos": [
+      "Aplicar cada fase del proceso tecnológico.",
+      "Realizar bocetos claros y compararlos.",
+      "Planificar recursos y tareas en equipo.",
+      "Documentar el proceso con medios digitales.",
+      "Evaluar y mejorar el prototipo según feedback."
+    ],
+    "image": "img/tema4.jpg"
+  },
+development: {
+          presentationIframe: "https://app.nearpod.com/?pin=UGRJI&he=true" 
+        },
+
+  "news": [
+    {
+      "titulo": "Prohibido no tener ideas locas en clase",
+      "descripcion": "Cada vez más centros integran el emprendimiento como competencia clave, fomentando proyectos colaborativos y generación de ideas en el aula.",
+      "enlace": "https://elpais.com/espana/comunidad-valenciana/2025-04-12/prohibido-no-tener-ideas-locas-en-clase.html",
+      "pregunta": "¿Qué metodología promueven los centros según el artículo?",
+      "opciones": [
+        "El emprendimiento y proyectos colaborativos.",
+        "La memorización de contenidos.",
+        "El trabajo individual exclusivamente.",
+        "La enseñanza tradicional."
+      ],
+      "correcta": 0
+    },
+    {
+      "titulo": "La educación del futuro ya está aquí",
+      "descripcion": "LaCabina muestra avances tecnológicos como asistentes de IA y telepresencia holográfica para documentar y presentar proyectos educativos.",
+      "enlace": "https://elpais.com/tecnologia/2024-12-12/la-educacion-del-futuro-ya-esta-aqui.html",
+      "pregunta": "¿Qué herramienta permite la telepresencia en el aula?",
+      "opciones": [
+        "La telepresencia holográfica en 3D.",
+        "La pizarra de tiza tradicional.",
+        "El libro de texto impreso.",
+        "El proyector de diapositivas."
+      ],
+      "correcta": 0
+    }
+  ],
+  "challenge": {
+    "reto": "Elige un problema de la clase: identifica la necesidad, dibuja un boceto de tu solución, planifica materiales y tareas, documenta el proceso en un cuaderno digital, y evalúa el prototipo proponiendo una mejora.",
+    "image": "img/reto4.jpg",
+    "consejo": "1) Trabaja en grupo para definir el problema.<br>2) Usa lápiz y papel para tus primeros bocetos.<br>3) Sube fotos y descripciones a la plataforma digital.<br>4) Reúne feedback de tus compañeros y mejora tu diseño.",
+    "criterios": [
+      "Aplica al menos tres fases del proceso.",
+      "Incluye bocetos claros y descriptivos.",
+      "Registra el proceso con medios digitales.",
+      "Propone una mejora tras la evaluación."
+    ],
+    "tiempo": "3 sesiones"
+  },
+  "quiz": [
+    {
+      "pregunta": "¿Cuál es la primera fase del proceso tecnológico?",
+      "opciones": [
+        "Identificar el problema.",
+        "Construir el prototipo.",
+        "Vender el producto.",
+        "Ignorar la idea."
+      ],
+      "correcta": 0
+    },
+    {
+      "pregunta": "¿Para qué sirve un boceto?",
+      "opciones": [
+        "Para representar una idea antes de construirla.",
+        "Para esconder la solución.",
+        "Para copiar sin pensar.",
+        "Para hacer el trabajo más largo."
+      ],
+      "correcta": 0
+    },
+    {
+      "pregunta": "Después de probar un prototipo, ¿qué debes hacer?",
+      "opciones": [
+        "Evaluarlo y mejorar el diseño.",
+        "Venderlo sin revisar.",
+        "Olvidarlo en un cajón.",
+        "Esconderlo."
+      ],
+      "correcta": 0
+          }
+        ]
+      },
+{
   "id": "diseno-2d-3d",
   "title": "Diseño 2D y 3D",
   "description": "Aprenderás a dibujar planos en 2D y a modelar en 3D usando software CAD, y a preparar archivos para impresión o simulación.",
@@ -755,7 +796,7 @@ development: {
     ]
   },
  "summary": {
-    "texto": "En este tema vas a convertir tus ideas en planos 2D precisos y modelos 3D listos para impresión y simulación, usando herramientas CAD gratuitas y fáciles como Tinkercad.<br><br>Comenzaremos con el CAD 2D: aprenderás a dibujar líneas, polígonos y curvas, y a aplicar escalas y acotaciones para definir dimensiones exactas. Practicarás creando un plano de un objeto sencillo (por ejemplo, una caja o una pieza de juego), añadiendo cotas y etiquetas claras para que cualquiera pueda entender tu dibujo.<br><br>Después darás el salto al CAD 3D: utilizarás Tinkercad para agrupar sólidos básicos (cubos, cilindros, prismas) y crear formas complejas. Verás cómo rotar, mover y alinear piezas, y cómo usar operaciones booleanas para unir o restar volúmenes. Finalmente, exportarás tu diseño en formato STL para impresión o simulación.<br><br>También estudiarás las vistas ortogonales y la perspectiva: aprenderás a presentar tu modelo 3D en diferentes ángulos (frontal, lateral, superior) y a generar perspectivas que muestren profundidad, usando herramientas del software o bocetándolo a mano.<br><br>Profundizaremos en los formatos de archivo más comunes (DWG, DXF, STL y OBJ): sabrás cuándo elegir cada uno y cómo preparar tu fichero para que las máquinas de CNC o las impresoras 3D lo interpreten sin errores. Conocerás buenas prácticas como verificar la escala, comprobar que la malla esté cerrada y ajustar la resolución para evitar problemas de impresión.<br><br>Al finalizar, serás capaz de seleccionar la mejor herramienta para cada tarea, aplicar escalas y acotaciones en tus planos, modelar en 3D y preparar archivos correctamente. Desarrollarás habilidades de representación gráfica y diseño asistido por ordenador esenciales para tus proyectos de Tecnología y para cualquier carrera técnica. ¡Manos a la obra!<br><br><strong>Glosario:</strong><br>- CAD: Diseño Asistido por Ordenador.<br>- Plano 2D: representación plana de un objeto con dimensiones.<br>- Modelo 3D: objeto digital con volumen en tres dimensiones.<br>- STL: formato estándar de impresión 3D.<br>- Vistas ortogonales: proyecciones en ángulo recto de un objeto.",
+    "texto": "En este tema vas a convertir tus ideas en planos 2D precisos y modelos 3D listos para impresión y simulación, usando herramientas CAD gratuitas y fáciles como Tinkercad.<br><br><strong>Comenzaremos con el CAD 2D:</strong> aprenderás a dibujar líneas, polígonos y curvas, y a aplicar escalas y acotaciones para definir dimensiones exactas. Practicarás creando un plano de un objeto sencillo (por ejemplo, una caja o una pieza de juego), añadiendo cotas y etiquetas claras para que cualquiera pueda entender tu dibujo.<br><br><strong>Después darás el salto al CAD 3D:</strong> utilizarás Tinkercad para agrupar sólidos básicos (cubos, cilindros, prismas) y crear formas complejas. Verás cómo rotar, mover y alinear piezas, y cómo usar operaciones booleanas para unir o restar volúmenes. Finalmente, exportarás tu diseño en formato STL para impresión o simulación.<br><br>También estudiarás las vistas ortogonales y la perspectiva: aprenderás a presentar tu modelo 3D en diferentes ángulos (frontal, lateral, superior) y a generar perspectivas que muestren profundidad, usando herramientas del software o bocetándolo a mano.<br><br>Profundizaremos en los formatos de archivo más comunes (DWG, DXF, STL y OBJ): sabrás cuándo elegir cada uno y cómo preparar tu fichero para que las impresoras 3D lo interpreten sin errores. Conocerás buenas prácticas como verificar la escala, comprobar que la malla esté cerrada y ajustar la resolución para evitar problemas de impresión.<br><br>Al finalizar, serás capaz de seleccionar la mejor herramienta para cada tarea, aplicar escalas y acotaciones en tus planos, modelar en 3D y preparar archivos correctamente. Desarrollarás habilidades de representación gráfica y diseño asistido por ordenador esenciales para tus proyectos de Tecnología y para cualquier carrera técnica. ¡Manos a la obra!<br><br><strong>Glosario:</strong><ul><li>CAD: Diseño Asistido por Ordenador.<li></li>Plano 2D: representación plana de un objeto con dimensiones.<li></li>Modelo 3D: objeto digital con volumen en tres dimensiones.<li></li>STL: formato estándar de impresión 3D.<li></li>Vistas ortogonales: proyecciones en ángulo recto de un objeto.</li></ul>",
     "puntos": [
       "Dibujar líneas, polígonos y aplicar escalas en CAD 2D.",
       "Acotar planos con dimensiones claras.",
@@ -875,7 +916,7 @@ development: {
     ]
   },
   "summary": {
-    "texto": "En este tema descubrirás cómo las máquinas simples multiplican la fuerza y cómo las estructuras permanecen estables bajo carga.<br><br>Primero, estudiarás las palancas:<br>- Palanca de primer género: el punto de apoyo está entre fuerza y carga (ejemplo: balancín).<br>- Palanca de segundo género: la carga está entre fuerza y apoyo (ejemplo: carretilla).<br>- Palanca de tercer género: la fuerza está entre apoyo y carga (ejemplo: pinza de depilar).<br><br>Practicarás construyendo cada tipo con materiales sencillos (reglas, pernos y tuercas) y medirás cuánta masa puedes levantar con diferentes longitudes de brazo de palanca.<br><br>Después, verás las poleas:<br>- Polea fija: cambia la dirección de la fuerza.<br>- Polea móvil: reduce el esfuerzo necesario.<br>- Polipasto: combina varias poleas para facilitar levantar cargas pesadas.<br><br>Con tu prototipo de polea móvil hecho con carretes y cuerdas, experimentarás cómo varía la fuerza requerida.<br><br>En la parte de estructuras, aprenderás qué hace estable un puente o un andamio:<br>- Centro de gravedad bajo.<br>- Distribución uniforme de la carga.<br>- Formas trianguladas que refuerzan la rigidez.<br><br>Montarás una maqueta de puente de papel y comprobarás cuántos libros aguanta según la disposición de sus soportes.<br><br><strong>Glosario:</strong><br>- Palanca: barra rígida que gira sobre un punto de apoyo.<br>- Polea: rueda con cuerda que cambia la dirección o magnitud de la fuerza.<br>- Centro de gravedad: punto donde se considera concentrada la masa.<br>- Ventaja mecánica: relación entre la fuerza de salida y la de entrada.<br><br>Al terminar, sabrás explicar el funcionamiento de tus prototipos y aplicar estos principios para resolver problemas prácticos de forma segura y sostenible.<br>",
+    "texto": "En este tema descubrirás cómo las máquinas simples multiplican la fuerza y cómo las estructuras permanecen estables bajo carga.<br><br>Primero, estudiarás las <strong>palancas:</strong><ul><li>Palanca de primer género: el punto de apoyo está entre fuerza y carga (ejemplo: balancín).</li><li>Palanca de segundo género: la carga está entre fuerza y apoyo (ejemplo: carretilla).</li><li>Palanca de tercer género: la fuerza está entre apoyo y carga (ejemplo: pinza de depilar).</li></ul>Practicarás construyendo cada tipo con materiales sencillos (reglas, pernos y tuercas) y medirás cuánta masa puedes levantar con diferentes longitudes de brazo de palanca.<br><br>Después, verás las <strong>poleas</strong>:<ul><li>Polea fija: cambia la dirección de la fuerza.</li><li>Polea móvil: reduce el esfuerzo necesario.</li><li>Polipasto: combina varias poleas para facilitar levantar cargas pesadas.</li></ul>Con tu prototipo de polea móvil hecho con carretes y cuerdas, experimentarás cómo varía la fuerza requerida.<br><br>En la parte de <strong>estructuras</strong>, aprenderás qué hace estable un puente o un andamio:<ul><li>Centro de gravedad bajo.</li><li>Distribución uniforme de la carga.</li><li>Formas trianguladas que refuerzan la rigidez.</li></ul>Montarás una maqueta de puente de papel y comprobarás cuántos libros aguanta según la disposición de sus soportes.<br><br><strong>Glosario:</strong><ul><li>Palanca: barra rígida que gira sobre un punto de apoyo.</li><li>Polea: rueda con cuerda que cambia la dirección o magnitud de la fuerza.</li><li>Centro de gravedad: punto donde se considera concentrada la masa.</li><li>Ventaja mecánica: relación entre la fuerza de salida y la de entrada.</li></ul><br>Al terminar, sabrás explicar el funcionamiento de tus prototipos y aplicar estos principios para resolver problemas prácticos de forma segura y sostenible.<br><br>",
     "puntos": [
       "Definir y construir palancas de los tres géneros.",
       "Experimentar con poleas fijas, móviles y polipastos.",
@@ -994,12 +1035,11 @@ note: "Material elaborado por Pedro Landín – CPR Sagrado Corazón de Jesús (
     ]
   },
   "summary": {
-    "texto": "En este tema vas a descubrir los fundamentos de la electricidad y aprender a montar y probar circuitos sencillos de forma segura.<br><br>Comenzaremos definiendo tres conceptos clave:<br>- Corriente eléctrica: movimiento de electrones a través de un conductor.<br>- Voltaje: diferencia de potencial que impulsa esa corriente.<br>- Resistencia: oposición que limita el flujo de corriente.<br><br>A continuación, practicarás el montaje de circuitos:<br>- Circuito en serie: conecta dos bombillas una tras otra y observa cómo disminuye el brillo al añadir más lámparas.<br>- Circuito en paralelo: conecta las bombillas en ramas independientes para que cada una mantenga brillo constante.<br><br>Conectarás pilas, cables y bombillas, comprobarás continuidad y tensión con un multímetro, midiendo voltajes en cada punto.<br><br>Reflexionaremos sobre el impacto ambiental de los dispositivos eléctricos y aprenderás buenas prácticas de reciclaje:<br>- Desmontar componentes y separar metales, plásticos y pilas para llevarlos a un punto limpio.<br>- Evitar dejar residuos electrónicos en contenedores convencionales.<br><br>Al finalizar, serás capaz de diseñar un circuito básico, medir sus parámetros eléctricos y documentar tus resultados en un informe.<br><br><strong>Glosario:</strong><br>- Multímetro: instrumento para medir voltaje, corriente y resistencia.<br>- Circuito en serie: componentes conectados en un único camino.<br>- Circuito en paralelo: componentes conectados en múltiples ramas.<br>- Punto limpio: instalación para el reciclaje de residuos peligrosos.",
+    "texto": "En este tema vas a descubrir los fundamentos de la electricidad y aprender a montar y probar circuitos sencillos de forma segura.<br><br>Comenzaremos definiendo tres conceptos clave:<ul><li>Corriente eléctrica: movimiento de electrones a través de un conductor.</li><li>Voltaje: diferencia de potencial que impulsa esa corriente.</li><li>Resistencia: oposición que limita el flujo de corriente.</li></ul><br>A continuación, practicarás el montaje de circuitos:<ul><li>Circuito en serie: conecta dos bombillas una tras otra y observa cómo disminuye el brillo al añadir más lámparas.</li><li>Circuito en paralelo: conecta las bombillas en ramas independientes para que cada una mantenga brillo constante.</li></ul>Conectarás pilas, cables y bombillas, comprobarás continuidad y tensión con un multímetro, midiendo voltajes en cada punto.<br><br>Al finalizar, serás capaz de diseñar un circuito básico, medir sus parámetros eléctricos y documentar tus resultados en un informe.<br><br><strong>Glosario:</strong><ul><li>Multímetro: instrumento para medir voltaje, corriente y resistencia.</li><li>Circuito en serie: componentes conectados en un único camino.</li><li>Circuito en paralelo: componentes conectados en múltiples ramas.</li></ul><br>",
     "puntos": [
       "Comprender corriente, voltaje y resistencia.",
       "Montar circuitos en serie y en paralelo.",
       "Medir parámetros eléctricos con un multímetro.",
-      "Aplicar normas de seguridad y desmontar para reciclar.",
       "Documentar resultados en un informe."
     ],
     "image": "img/tema8.jpg"
@@ -1115,7 +1155,7 @@ development: {
     ]
   },
   "summary": {
-    "texto": "En este tema vas a descubrir qué significa ser un ciudadano digital responsable y cómo proteger tus datos y tus dispositivos.<br><br>Comenzaremos con la netiqueta: aprenderás las normas básicas de respeto en línea, cómo formular comentarios constructivos y evitar el ciberacoso, así como a reconocer comportamientos tóxicos en redes sociales.<br><br>Después, profundizaremos en la privacidad: crearás contraseñas robustas, configurarás tus cuentas para compartir solo lo necesario y aprenderás a gestionar tus datos personales de forma segura.<br><br>Conocerás iniciativas como el Día de Internet Seguro, que promueven el uso crítico y responsable de la red, y otras campañas de sensibilización.<br><br>Analizaremos cómo identificar señales de uso problemático o adicción digital, y qué hacer cuando detectes un posible ciberacoso o un ataque: pasos claros para notificar, recuperar el control de tus cuentas y restaurar datos perdidos.<br><br>También verás un ejemplo práctico: si recibes un mensaje sospechoso solicitando tus credenciales, aprenderás por qué no debes responder, cómo borrarlo y a quién informar en el centro educativo.<br><br>Al finalizar, integrarás buenas prácticas de seguridad por defecto: mantener el software actualizado, usar autenticación reforzada y organizar tu información de forma ordenada. <br><br><strong>Glosario:</strong><br>- Netiqueta: conjunto de normas de comportamiento en Internet.<br>- Ciberacoso: acoso o hostigamiento realizado por medios digitales.<br>- Autenticación reforzada: uso de un segundo factor de verificación.<br>- Punto limpio digital: canales oficiales para reportar incidentes de seguridad.",
+    "texto": "En este tema vas a descubrir qué significa ser un ciudadano digital responsable y cómo proteger tus datos y tus dispositivos.<br><br>Comenzaremos con la netiqueta: aprenderás las normas básicas de respeto en línea, cómo formular comentarios constructivos y evitar el ciberacoso, así como a reconocer comportamientos tóxicos en redes sociales.<br><br>Después, profundizaremos en la privacidad: crearás contraseñas robustas, configurarás tus cuentas para compartir solo lo necesario y aprenderás a gestionar tus datos personales de forma segura.<br><br>Conocerás iniciativas como el Día de Internet Seguro, que promueven el uso crítico y responsable de la red, y otras campañas de sensibilización.<br><br>Analizaremos cómo identificar señales de uso problemático o adicción digital, y qué hacer cuando detectes un posible ciberacoso o un ataque: pasos claros para notificar, recuperar el control de tus cuentas y restaurar datos perdidos.<br><br>También verás un ejemplo práctico: si recibes un mensaje sospechoso solicitando tus credenciales, aprenderás por qué no debes responder, cómo borrarlo y a quién informar en el centro educativo.<br><br>Al finalizar, integrarás buenas prácticas de seguridad por defecto: mantener el software actualizado, usar autenticación reforzada y organizar tu información de forma ordenada. <br><br><strong>Glosario:</strong><ul><li>Netiqueta: conjunto de normas de comportamiento en Internet.</li><li>Ciberacoso: acoso o hostigamiento realizado por medios digitales.</li><li>Autenticación reforzada: uso de un segundo factor de verificación.</li><li>Punto limpio digital: canales oficiales para reportar incidentes de seguridad.</li></ul>",
     "puntos": [
       "Aplicar normas de netiqueta y convivencia en línea.",
       "Crear y gestionar contraseñas de forma segura.",
@@ -1233,7 +1273,7 @@ development: {
     ]
   },
   "summary": {
-    "texto": "En este tema comenzarás a pensar como un programador: aprenderás a descomponer problemas en pasos claros y a abstraer lo esencial para centrarte en lo relevante.<br><br>Primero, practicarás con diagramas de flujo y pseudocódigo: por ejemplo, redactarás instrucciones para que un personaje de Scratch recorra un laberinto usando bucles y condiciones.<br><br>Después, pasarás al bloque visual en Scratch u otra plataforma similar: crearás una pequeña animación o juego que responda a clics, pulse un sprite y use variables para contar puntos.<br><br>A continuación, migrarás al hardware con MakeCode y BBC micro:bit. Conectarás un sensor de temperatura o de luz, programarás el micro:bit para mostrar lecturas por sus LEDs y para enviar datos por radio o Bluetooth.<br><br>Finalmente, descubrirás el mundo del Internet de las Cosas (IoT): conectarás tu micro:bit a un dashboard en la nube (por ejemplo, ThingSpeak o Adafruit IO), aprenderás a configurar tu cuenta y a enviar datos periódicos para visualizarlos en gráficos en tiempo real.<br><br>También incorporarás la depuración: testarás tus bloques en el simulador, corregirás errores (‘bugs’) y usarás realimentación para mejorar tu código y tu confianza.<br><br>Al acabar, habrás completado dos proyectos: uno en Scratch que resuelva un reto lógico y otro en micro:bit IoT que recoja datos de un sensor y los muestre en un dashboard.<br><br><strong>Glosario:</strong><br>- Descomposición: dividir un problema en partes más pequeñas.<br>- Abstracción: eliminar detalles innecesarios.<br>- Pseudocódigo: descripción en lenguaje natural de un algoritmo.<br>- Evento: suceso que inicia un bloque de código.<br>- IoT: red de dispositivos conectados que intercambian datos.",
+    "texto": "En este tema comenzarás a pensar como un programador: aprenderás a descomponer problemas en pasos claros y a abstraer lo esencial para centrarte en lo relevante.<br><br>Primero, practicarás con diagramas de flujo y pseudocódigo: por ejemplo, redactarás instrucciones para que un personaje de Scratch recorra un laberinto usando bucles y condiciones.<br><br>Después, pasarás al bloque visual en Scratch u otra plataforma similar: crearás una pequeña animación o juego que responda a clics, pulse un sprite y use variables para contar puntos.<br><br>A continuación, migrarás al hardware con MakeCode y BBC micro:bit. Conectarás un sensor de temperatura o de luz, programarás el micro:bit para mostrar lecturas por sus LEDs y para enviar datos por radio o Bluetooth.<br><br>Finalmente, descubrirás el mundo del Internet de las Cosas (IoT): conectarás tu micro:bit a un dashboard en la nube (por ejemplo, ThingSpeak o Adafruit IO), aprenderás a configurar tu cuenta y a enviar datos periódicos para visualizarlos en gráficos en tiempo real.<br><br>También incorporarás la depuración: testarás tus bloques en el simulador, corregirás errores (‘bugs’) y usarás realimentación para mejorar tu código y tu confianza.<br><br>Al acabar, habrás completado dos proyectos: uno en Scratch que resuelva un reto lógico y otro en micro:bit IoT que recoja datos de un sensor y los muestre en un dashboard.<br><br><strong>Glosario:</strong><ul><li>Descomposición: dividir un problema en partes más pequeñas.</li><li>Abstracción: eliminar detalles innecesarios.</li><li>Pseudocódigo: descripción en lenguaje natural de un algoritmo.</li><li> Evento: suceso que inicia un bloque de código.</li><li>IoT: red de dispositivos conectados que intercambian datos.</li></ul>",
     "puntos": [
       "Descomponer problemas y abstraer información clave.",
       "Elaborar diagramas de flujo y pseudocódigo.",
@@ -1244,7 +1284,7 @@ development: {
     "image": "img/tema10.jpg"
   },
 development: {
-          presentationIframe: "https://descargas.intef.es/recursos_educativos/ODES_SGOA/Codigo_Escuela/Descifrando_codigo_Ada_2_ciclo/introduccin.html"
+          presentationIframe: "https://edea.juntadeandalucia.es/bancorecursos/file/0d1266b3-f173-4ae8-aada-2fbffea186de/1/nuestra_placa_robotica_se_comunica_con_el_mundo.zip/index.html"
         },
   "news": [
     {
@@ -3866,10 +3906,6 @@ document.getElementById('presentationNote').innerHTML = tema.development.note ||
   </script>
 </body>
 </html>
-
-
-
-
 
 
 
