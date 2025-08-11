@@ -108,6 +108,9 @@
 <button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('3eso')">
           3º ESO - Tecnología y Digitalización
         </button>
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('3eso-ctrl-robotica')">
+          3º ESO - Control y Robótica
+        </button>
 <button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('4eso')">
           4º ESO - Tecnología y Digitalización
         </button>
@@ -2586,6 +2589,248 @@ note: "Mi vivienda eficiente – 	Mercedes Tierno Nicolás. Licencia CC BY-SA 4.
       }
     ]
   },
+"3eso-ctrl-robotica": {
+  title: "3º ESO – Control y Robótica",
+  topics: [
+{
+  id: "vr-control-basico",
+  title: "Control y programación por bloques con VEXcode VR",
+  description: "Bases de sistemas automáticos y control en simulador: sensores, movimiento y lazo abierto/cerrado.",
+  image: "img/intro38.jpg",
+  intro: {
+    motivacion: "Empieza sin hardware: programa un robot virtual y entiende cómo ‘piensa’.",
+    curiosidad: "¿Puedes seguir líneas o esquivar obstáculos solo con bloques?",
+    criterios: ["1.1 Reconocer sistemas automáticos de control en el entorno cotidiano, identificando cada una de las partes que lo constituyen y explicando el funcionamiento del conjunto.", 
+"1.2 Valorar la importancia de los sistemas automáticos de control tanto en el ámbito industrial como en el civil y doméstico, ejemplificando en artefactos tecnológicos cotidianos.", 
+"3.1 Comprender la función que cumplen los programas y lenguajes de programación en la resolución de problemas, aplicando dicha compresión a la casuística de la robótica.", 
+"3.2 Diseñar programas completos de control mediante programación por bloques, a través de diverso distinto software, compatible con software libre, resolviendo los requerimientos inicialmente fijados en los retos, y depurando y autocorrigiendo defectos."],
+    contenidos: [
+      "Sistema de control: sensores-proceso-actuadores.",
+      "Lazo abierto vs lazo cerrado.",
+      "Bloques: secuencia, condicionales, bucles, variables."
+    ]
+  },
+  summary: {
+    texto: "Trabajarás con retos guiados en VEXcode VR para entender entradas, proceso y salidas. Verás cómo el feedback del sensor ajusta el comportamiento del robot (control realimentado).",
+    puntos: [
+      "Identificar partes de un sistema de control.",
+      "Programar movimientos básicos con bloques.",
+      "Usar condicionales y bucles en tareas de navegación."
+    ],
+    image: "img/tema38.jpg"
+  },
+  development: {
+    // Si el archivo tiene ese nombre exacto en tu repo, deja esta ruta codificada:
+    presentationIframe: "3CYR/PR%C3%81CTICAS%20vr-vex%2015-02-2022.PDF",
+    note: "Material elaborado por Javier Fernández Panadero. Disponible en <a href='https://lacienciaparatodos.wordpress.com/' target='_blank'>lacienciaparatodos.wordpress.com</a>. Licencia CC BY-NC-ND 4.0."
+  },
+  news: [
+    {
+      titulo: "VEXcode VR",
+      descripcion: "Así es la plataforma que permite programar un robot virtual mediante bloques",
+      enlace: "https://www.educaciontrespuntocero.com/tecnologia/vexcode-vr-guia/",
+      pregunta: "¿Qué permite programar VEXcode VR sin usar hardware físico?",
+      opciones: [
+        "Robots virtuales con bloques",
+        "Aplicaciones móviles nativas",
+        "PLC industriales con ladder",
+        "Servidores web en la nube"
+      ],
+      correcta: 0
+    }
+  ],
+  quiz: [
+    { pregunta: "Un sistema en lazo cerrado…", opciones: ["Usa realimentación de sensores.", "No mide nada.", "Solo ejecuta una vez.", "Nunca se corrige."], correcta: 0 },
+    { pregunta: "En VEXcode VR, un ‘sensor’ es…", opciones: ["Una entrada que mide el entorno.", "Un motor.", "Una pantalla.", "Un archivo."], correcta: 0  
+}
+      ]
+    },
+{
+  id: "microbit-par-impar",
+  title: "Historia, componentes y Python con micro:bit",
+  description: "De la historia de la robótica a la micro:bit V2: sensores, E/S y primeros pasos en Python.",
+  image: "img/intro39.jpg",
+  intro: {
+    motivacion: "Conoce de dónde viene la robótica y programa tu primera app en Python.",
+    curiosidad: "¿Qué sensores trae una micro:bit y cómo leerlos en código?",
+    criterios: ["2.1 Identificar los diferentes tipos de robots existentes, valorando la contribución de estos a la resolución de problemas en los diferentes sectores de la sociedad (industrial, civil y doméstico).",
+ "2.2 Identificar y clasificar las distintas partes que componen un robot, describiendo la función que realizan dentro del mismo, así como los principios que rigen su funcionamiento.", 
+"2.3 Conocer los tipos de movimientos que realiza un robot, comprendiendo los métodos utilizados para posicionarlo conociendo la relación entre las articulaciones y grados de libertad del mismo.",
+ "2.5 Conocer las características de las unidades de control, compatibles con el hardware y software libres, utilizando de modo físico y/o simulado sus conexiones, entradas y salidas tanto analógicas como digitales y describiendo sus diferentes partes, conociendo los sistemas de comunicación que pueden utilizar.",
+ "3.1 Comprender la función que cumplen los programas y lenguajes de programación en la resolución de problemas, aplicando dicha compresión a la casuística de la robótica.",
+ "3.3 Diseñar programas completos de control mediante software de lenguaje textual, compatible con software libre, resolviendo los requerimientos inicialmente fijados en los retos, y depurando y autocorrigiendo defectos."],
+    contenidos: [
+      "Historia y tipología de robots e impacto social.",
+      "Arquitectura: sensores, actuadores, control.",
+      "Micro:bit V2: E/S analógicas y digitales, matriz LED, botones, micrófono y altavoz.",
+      "Editor de código y primeros programas en Python."
+    ]
+  },
+  summary: {
+    texto: "Con el REA ‘Par e Impar’ conocerás la historia y aplicaciones de la robótica, identificarás los sistemas de un robot y te iniciarás en Python con micro:bit V2, creando una mini-app que demuestre lo aprendido.",
+    puntos: [
+      "Clasificar robots y ejemplos de uso.",
+      "Reconocer componentes de micro:bit V2 y sus puertos.",
+      "Programar en Python con entradas y salidas sencillas."
+    ],
+    image: "img/tema39.jpg"
+  },
+  development: {
+    presentationIframe: "https://edea.juntadeandalucia.es/bancorecursos/file/29709ceb-b590-4dab-bd9d-74b701a385ef/1/COM_3ESO_REA_03_v01.zip/index.html",
+    note: "¿Par o impar? – Autores REA Junta de Andalucía. Licencia CC BY-SA 4.0. Si el portal bloquea el iframe, abre en otra pestaña."
+  },
+  news: [
+    {
+      titulo: "Python ganó el título de «lenguaje de programación del año 2024»",
+      descripcion: "Los lenguajes de programación que más crecen en el mundo",
+      enlace: "https://www.channelpartner.es/negocios/los-lenguajes-de-programacion-que-mas-crecen-en-el-mundo/",
+    pregunta: "¿Cuál es el enfoque principal del artículo enlazado?",
+    opciones: [
+      "Tendencias de crecimiento de lenguajes de programación a nivel mundial",
+      "Manual de instalación de micro:bit y drivers USB",
+      "Comparativa de placas Arduino para proyectos educativos",
+      "Historia de Fortran y Cobol en los años 60"
+    ],
+    correcta: 0
+    }
+  ],
+  quiz: [
+    {
+      pregunta: "En un robot, el ‘sensor’ corresponde a…",
+      opciones: ["Entrada", "Proceso", "Salida", "Almacenamiento"],
+      correcta: 0
+    },
+    {
+      pregunta: "En micro:bit, leer el botón A en Python se hace con…",
+      opciones: [
+        "button_a.is_pressed()",
+        "digitalRead(A)",
+        "input.buttonA()",
+        "pin0.read_digital()"
+      ],
+      correcta: 0 
+}
+      ]
+    },
+{
+  id: "Arduino",
+  title: "Arduino",
+  description: "Diseña un sistema que mide la humedad del suelo y activa una bomba de riego con Arduino.",
+  image: "img/intro40.jpg",
+  intro: {
+    motivacion: "Haz que tus plantas se rieguen solas según lo que 'siente' el suelo.",
+    curiosidad: "¿Qué umbral de humedad escogerías para no regar de más?",
+    criterios: ["2.4 Conocer y distinguir los diferentes tipos de sensores y actuadores que pueden formar parte de un robot, implementando de modo físico y/o simulado sus circuitos característicos en función de sus características técnicas.", 
+"2.5 Conocer las características de las unidades de control, compatibles con el hardware y software libres, utilizando de modo físico y/o simulado sus conexiones, entradas y salidas tanto analógicas como digitales y describiendo sus diferentes partes, conociendo los sistemas de comunicación que pueden utilizar.", 
+"2.6 Conocer las conexiones de distintos elementos de entrada y salida a unidades de control, compatibles con el hardware y software libres, conectándolas con el ordenador y otros dispositivos digitales, tanto de forma alámbrica como inalámbrica, poniendo en valor la potencialidad del Internet de las Cosas (IoT).",
+"3.3 Diseñar programas completos de control mediante software de lenguaje textual, compatible con software libre, resolviendo los requerimientos inicialmente fijados en los retos, y depurando y autocorrigiendo defectos.", "3.4 Subir adecuadamente los programas creados a la unidad de control, formando parte de la documentación técnica de resolución de proyectos y utilizando adecuadamente las licencias necesarias para la compartición de documentos y programas."], 
+    contenidos: [
+      "Sensor de humedad (analógico): lectura y calibración.",
+      "Umbral e histéresis para decidir riego.",
+      "Actuadores: relé/bomba (protección con diodo y alimentación adecuada).",
+      "Depuración por monitor serie y registro de datos.",
+      "Documentación técnica del proyecto (esquema, código, pruebas).",
+      "Extensión opcional: envío de datos a la nube (IoT)."
+    ]
+  },
+  summary: {
+    texto: "Construirás un riego inteligente: medir humedad, decidir con un umbral e histéresis y accionar una bomba con seguridad eléctrica. Dejarás evidencias (esquema, código y pruebas) listas para publicar.",
+    puntos: [
+      "Conectar sensor analógico y leer con analogRead.",
+      "Accionar bomba mediante relé/transistor con diodo de protección.",
+      "Ajustar umbrales y evitar oscilaciones (histéresis).",
+      "Probar y depurar con el monitor serie."
+    ],
+    image: "img/tema40.jpg"
+  },
+  development: {
+       presentationIframe: "https://procomun.intef.es/ode/view/widget/es_2023121412_9184630",
+    note: "Hydro-bot: robótica para el riego inteligente. Monica Garrido Escudero. Licencia CC BY-SA 4.0."
+  },
+  news: [
+    {
+      titulo: "Arduino",
+      descripcion: "Proyectos sencillos para crear tú mismo con Arduino",
+      enlace: "https://hardzone.es/tutoriales/componentes/arduino-que-hacer-proyectos-posibilidades/",
+    pregunta: "Arduino es principalmente…",
+    opciones: [
+      "una plataforma de hardware y software libre con placas programables",
+      "un sistema operativo propietario",
+      "un lenguaje de programación de pago",
+      "una app móvil sin componentes físicos"
+    ],
+    correcta: 0
+    }
+  ],
+  quiz: [
+    {
+      pregunta: "Para accionar con seguridad una bomba de 6–12 V desde Arduino, ¿qué es imprescindible?",
+      opciones: [
+        "Un relé/mosfet y diodo de protección",
+        "Conectarla directo a un pin digital",
+        "Un potenciómetro",
+        "Sólo un LED en serie"
+      ],
+      correcta: 0
+    },
+    {
+      pregunta: "Si el riego se enciende y apaga muy rápido cerca del umbral, ¿qué técnica aplicas?",
+      opciones: ["Histéresis", "Aumento de baudrate", "Pull-down", "Debounce de botones"],
+      correcta: 0 
+}
+      ]
+    },
+    {
+      id: "html-publicacion",
+      title: "Publicación de proyectos en la web",
+      description: "Del diseño a la publicación: estructura HTML y presentación clara.",
+      image: "img/intro41.jpg",
+      intro: {
+        motivacion: "Comparte tu proyecto de robótica en una web propia.",
+        curiosidad: "¿Qué etiquetas mínimas necesito para una página clara?",
+        criterios: ["3.4 Subir adecuadamente los programas creados a la unidad de control, formando parte de la documentación técnica de resolución de proyectos y utilizando adecuadamente las licencias necesarias para la compartición de documentos y programas."],
+        contenidos: [
+          "Estructura HTML (head, body, encabezados, listas, imágenes).",
+          "Buenas prácticas de contenido y accesibilidad básica.",
+          "Publicación estática (GitHub Pages u hospedaje del centro)."
+        ]
+      },
+      summary: {
+        texto: "Crearás una página con la documentación técnica: objetivo, materiales, esquema, código y resultados. Practicarás enlaces, listas, imágenes y formato semántico.",
+        puntos: [
+          "Estructurar la documentación técnica en HTML.",
+          "Insertar imágenes del montaje y bloques/código.",
+          "Publicar y compartir el enlace en clase."
+        ],
+        image: "img/tema41.jpg"
+      },
+      development: {
+        presentationIframe: "https://edea.juntadeandalucia.es/bancorecursos/file/f9f50655-cd56-4dec-b6c0-9c80cff51872/1/COM_3ESO_REA_05_v01.zip/index.html",
+        note: "Computación y Robótica para todos – Antonio Anselmo Jiménez Ruíz, José Pujol Pérez, Fco Javier Álvarez Jiménez, Lydia Nacimiento Rodríguez. Licencia CC BY-SA 4.0."
+      },
+      news: [
+        {
+          titulo: "Comentarios HTML",
+          descripcion: "Guía esencial para usarlos con eficacia y claridad",
+          enlace: "https://keepcoding.io/blog/como-anadir-comentarios-en-html/",
+          pregunta: "¿Cuál es la sintaxis correcta de un comentario HTML?",
+          opciones: [
+            "<!-- comentario -->",
+            "// comentario",
+            "/* comentario */",
+            "{# comentario #}"
+          ],
+          correcta: 0
+        }
+      ],
+      quiz: [
+        { pregunta: "¿Qué etiqueta define el contenido principal visible?", opciones: ["<body>", "<head>", "<meta>", "<title>"], correcta: 0 },
+        { pregunta: "Para listar pasos de montaje usas…", opciones: ["<ol>", "<canvas>", "<section>", "<br>"], correcta: 0
+ }
+      ]
+    }
+  ]
+},
 "4eso": {
   title: "4º ESO – Tecnología",
   topics: [
@@ -4179,17 +4424,28 @@ function showHome() {
 function showCourseTopics(courseId) {
   currentCourse = courseId;
   const course = coursesData[courseId];
-  document.getElementById('home-screen').classList.add('hidden');
-  document.getElementById('topics-screen').classList.remove('hidden');
-  document.getElementById('course-title').textContent = course.title;
+
+  if (!course) {
+    console.warn(`Curso no encontrado: ${courseId}`);
+    alert('No se ha encontrado el curso seleccionado.');
+    return;
+  }
+
+  // Reset de selección de tema al cambiar de curso
+  currentTopic = null;
+
+  document.getElementById('home-screen')?.classList.add('hidden');
+  document.getElementById('topics-screen')?.classList.remove('hidden');
+  const titleEl = document.getElementById('course-title');
+  if (titleEl) titleEl.textContent = course.title;
 
   const container = document.getElementById('topics-container');
+  if (!container) return;
   container.innerHTML = '';
 
-  course.topics.forEach(topic => {
+  (course.topics || []).forEach(topic => {
     const card = document.createElement('div');
-    card.className =
-      'bg-white rounded-xl shadow p-4 cursor-pointer hover:shadow-lg transition';
+    card.className = 'bg-white rounded-xl shadow p-4 cursor-pointer hover:shadow-lg transition';
     card.innerHTML = `
       <div class="flex space-x-4">
         <img src="${topic.image}" class="w-16 h-16 rounded-lg object-cover" alt="${topic.title}">
@@ -4204,44 +4460,83 @@ function showCourseTopics(courseId) {
 }
 
 function showTopics() {
-  document.getElementById('topic-screen').classList.add('hidden');
-  document.getElementById('topics-screen').classList.remove('hidden');
-  showCourseTopics(currentCourse);
+  document.getElementById('topic-screen')?.classList.add('hidden');
+  document.getElementById('topics-screen')?.classList.remove('hidden');
+  if (currentCourse) showCourseTopics(currentCourse);
 }
 
 /* === RENDERIZAR SECCIONES === */
 function showTopicContent(topicId) {
   currentTopic = topicId;
-  progress = { intro: false, summary: false, development: false, news: false, challenge: false };
-  document.getElementById('topics-screen').classList.add('hidden');
-  document.getElementById('topic-screen').classList.remove('hidden');
-  const topic = getCurrentTopic();
-  document.getElementById('topic-title').textContent = topic.title;
+
+  // Incluye 'quiz' para que updateStepColors no lea 'undefined'
+  progress = { intro: false, summary: false, development: false, news: false, challenge: false, quiz: false };
+
+  document.getElementById('topics-screen')?.classList.add('hidden');
+  document.getElementById('topic-screen')?.classList.remove('hidden');
+
+  // Intenta localizar el tema; si no existe, coge el primero
+  let topic = getCurrentTopic();
+  const topicsArray = coursesData[currentCourse]?.topics || [];
+  if (!topic && topicsArray.length) {
+    currentTopic = topicsArray[0].id;
+    topic = topicsArray[0];
+  }
+  if (!topic) {
+    console.warn('No hay temas en este curso.');
+    alert('Este curso no tiene temas disponibles.');
+    return;
+  }
+
+  const topicTitleEl = document.getElementById('topic-title');
+  if (topicTitleEl) topicTitleEl.textContent = topic.title;
+
+  // --- Ocultar "Reto" si el tema no tiene challenge ---
+  const challengeCircle = document.getElementById('step-challenge');
+  // Suele ser el círculo dentro de un botón; si no, intentamos con el propio id
+  const challengeBtn = challengeCircle?.closest('button') || document.getElementById('btn-step-challenge');
+  const quizCircle = document.getElementById('step-quiz');
+
+  const hasChallenge = !!topic.challenge;
+  if (challengeBtn) {
+    challengeBtn.classList.toggle('hidden', !hasChallenge);
+    // Opcional: aria-hidden para accesibilidad
+    challengeBtn.setAttribute('aria-hidden', String(!hasChallenge));
+  }
+  if (quizCircle) {
+    // Renumerar Quiz: 5 si NO hay reto, 6 si SÍ hay reto
+    quizCircle.textContent = hasChallenge ? '6' : '5';
+  }
+  // --- FIN ocultar/renumerar ---
+
   updateStepColors('intro');
   showIntro();
+
+  // Mejora UX: lleva la vista al principio
+  try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { /* no-op */ }
 }
 
 function getCurrentTopic() {
-  return coursesData[currentCourse].topics.find(t => t.id === currentTopic);
+  const course = coursesData[currentCourse];
+  if (!course?.topics) return null;
+  return course.topics.find(t => t.id === currentTopic) || null;
 }
 
 function updateStepColors(active) {
-  const steps = ['intro','summary','development','news','challenge','quiz'];
+  const steps = ['intro', 'summary', 'development', 'news', 'challenge', 'quiz'];
   steps.forEach(step => {
     const el = document.getElementById(`step-${step}`);
     if (!el) return;
     if (step === active) {
-      el.className =
-        'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold';
-    } else if (progress[step]) {
-      el.className =
-        'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-green-500 text-white font-bold';
+      el.className = 'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-purple-600 text-white font-bold';
+    } else if (progress && progress[step]) {
+      el.className = 'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-green-500 text-white font-bold';
     } else {
-      el.className =
-        'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold';
+      el.className = 'w-10 h-10 mx-auto rounded-full flex items-center justify-center bg-gray-300 text-white font-bold';
     }
   });
 }
+
 
 
 
@@ -4484,50 +4779,50 @@ function showChallenge() {
   }
 
   const topic = getCurrentTopic();
-  updateStepColors('challenge');
 
+  // Si este tema NO tiene reto: marcamos como completado y saltamos al Quiz
+  if (!topic || !topic.challenge) {
+    progress.challenge = true;          // <-- clave para que showQuiz no bloquee
+    showQuiz();
+    return;
+  }
+
+  updateStepColors('challenge');
   const isBachillerato = currentCourse === '1bachillerato' || currentCourse === '2bachillerato';
 
   document.getElementById('section-content').innerHTML = `
     <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 animate-fade-in flex flex-col md:flex-row gap-6 font-inter">
-      
-      <!-- Columna texto -->
       <div class="flex-1 overflow-y-auto max-h-96 pr-6">
         <h3 class="text-3xl font-orbitron font-bold text-purple-700 mb-4">Reto</h3>
-        <p class="text-gray-700 mb-4">${topic.challenge.reto}</p>
-        
+        <p class="text-gray-700 mb-4">${topic.challenge.reto || ''}</p>
         ${
           !isBachillerato && topic.challenge.consejo
             ? `<div class="bg-purple-50 p-3 rounded-lg text-sm text-gray-700 mb-4">
-                 <strong>Consejo:</strong><br>
-                 ${topic.challenge.consejo}
+                 <strong>Consejo:</strong><br>${topic.challenge.consejo}
                </div>`
             : ''
         }
-
         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded-md text-yellow-700 text-sm mb-6 font-semibold">
-          Para los retos que requieran búsqueda en Internet, recuerda consultar al menos <strong>dos fuentes diferentes</strong> para contrastar la información. Si usas inteligencia artificial, indica cuál y recuerda siempre verificar la información.
+          Para los retos que requieran búsqueda en Internet, recuerda consultar al menos <strong>dos fuentes</strong>.
+          Si usas inteligencia artificial, indica cuál y verifica la información.
         </div>
       </div>
-
-      <!-- Columna imagen -->
       <div class="flex-shrink-0 w-64 md:w-80 flex justify-center items-start">
-        ${
-          topic.challenge.image
-            ? `<img src="${topic.challenge.image}" alt="Reto"
-                class="rounded-xl shadow-lg border-4 border-purple-200 transition-transform duration-300 hover:scale-105 w-full h-auto object-cover">`
-            : ''
-        }
+        ${topic.challenge.image ? `<img src="${topic.challenge.image}" alt="Reto" class="rounded-xl shadow-lg border-4 border-purple-200 w-full h-auto object-cover">` : ''}
       </div>
     </div>
-
-    <!-- Botón -->
-    <button onclick="showQuiz()" 
-      class="mt-6 mx-auto block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-[1.03] transition-transform duration-300">
+    <button onclick="completeChallengeAndGoToQuiz()" class="mt-6 mx-auto block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-[1.03] transition-transform duration-300">
       Ir al Quiz
-    </button>
-  `;
+    </button>`;
 }
+
+// Helper para finalizar el reto y avanzar
+function completeChallengeAndGoToQuiz() {
+  progress.challenge = true;         // marcamos completado
+  updateStepColors('quiz');          // pinta el paso siguiente en morado/activo
+  showQuiz();
+}
+
 
 /* === QUIZ === */
 function showQuiz() {
@@ -4617,7 +4912,7 @@ function markComplete(section) {
   } else if (section === 'summary') {
     showDevelopment();
   } else if (section === 'development') {
-    showNews();      // ← Aquí hacemos el salto a Noticias
+    showNews();      
   } else if (section === 'news') {
     showChallenge();
   } else if (section === 'challenge') {
@@ -4637,6 +4932,9 @@ document.getElementById('presentationNote').innerHTML = tema.development.note ||
   </script>
 </body>
 </html>
+
+
+
 
 
 
