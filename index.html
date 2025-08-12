@@ -114,6 +114,10 @@
 <button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('4eso')">
           4º ESO - Tecnología y Digitalización
         </button>
+        </button>
+<button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('4eso-prog-robotica')">
+          4º ESO - Programación Informática
+        </button>
 <button class="bg-gradient-primary text-white p-4 rounded-2xl shadow hover:scale-[1.02] transition" onclick="showCourseTopics('1bachillerato')">
           1º Bachillerato - Tecnología
         </button>
@@ -2265,8 +2269,8 @@ note: "Aprendiendo ciberseguridad en la ESO – Mª Dolores Gamero Sánchez. Lic
     "image": "img/tema18.jpg"
   },
 development: {
-          presentationIframe: "https://edea.juntadeandalucia.es/bancorecursos/file/e4bb3b23-25ee-4578-9f0c-6be5cba1fb6e/1/COM_3ESO_REA_02_v01.zip/1_una_imagen_vale_ms_que_mil_palabras.html",
-note: "Nos comunicamos con la Lengua de Signos – Antonio Jiménez Ruiz, José Pujol Pérez, Francisco Javier Álvarez Jiménez, Lydia Nacimiento Rodríguez. Licencia CC BY-SA 4.0."
+          presentationIframe: "https://edea.juntadeandalucia.es/bancorecursos/file/d1bb5f09-682f-4e93-a799-e90b1c3364ed/2/COM_3ESO_REA_01_V02.zip/index.html",
+note: "Hola, ¿necesitas ayuda? – Antonio Jiménez Ruiz, José Pujol Pérez, Francisco Javier Álvarez Jiménez, Lydia Nacimiento Rodríguez. Licencia CC BY-SA 4.0."
         },
   "news": [
     {
@@ -2827,6 +2831,218 @@ note: "Mi vivienda eficiente – 	Mercedes Tierno Nicolás. Licencia CC BY-SA 4.
         { pregunta: "¿Qué etiqueta define el contenido principal visible?", opciones: ["<body>", "<head>", "<meta>", "<title>"], correcta: 0 },
         { pregunta: "Para listar pasos de montaje usas…", opciones: ["<ol>", "<canvas>", "<section>", "<br>"], correcta: 0
  }
+      ]
+    }
+  ]
+},
+"4eso-prog-robotica": {
+  title: "4º ESO – Programación Informática",
+  topics: [
+    {
+      id: "scratch-proyectos",
+      title: "Programación creativa con Scratch",
+      description: "Bases de programación por bloques para crear juegos y animaciones interactivas.",
+      image: "img/intro42.jpg",
+      intro: {
+        motivacion: "Crea tus propios videojuegos y animaciones con un lenguaje visual y fácil de usar.",
+        curiosidad: "¿Serías capaz de programar un juego completo solo con bloques?",
+        criterios: [
+          "1.1 Identificar la solución óptima de un problema planteado, proponiendo diferentes alternativas a través del pensamiento computacional, y seleccionando de manera argumentada la mejor de ellas.",
+          "1.2 Analizar los diferentes niveles de los lenguajes de programación, distinguiendo las características, necesidad, conveniencia y aplicación de cada uno de ellos.",
+          "2.1 Utilizar con destreza un entorno de programación gráfica por bloques, enfocando sus potencialidades hacia la generación de juegos y animaciones para ordenadores y otros dispositivos digitales, seleccionando las herramientas más apropiadas para generar nuevo contenido digital de manera creativa, respetando derechos de autor y licencias."
+        ],
+        contenidos: [
+          "Pensamiento computacional y estrategias de resolución de problemas.",
+          "Lenguajes de programación: alto y bajo nivel.",
+          "Bloques: apariencia, movimiento, bucles, eventos, operadores y variables.",
+          "Realimentación y uso básico de sensores.",
+          "Licencias y uso de materiales propios y de terceros."
+        ]
+      },
+      summary: {
+        texto: "Aprenderás a desarrollar juegos y animaciones con Scratch, aplicando pensamiento computacional y buenas prácticas de programación por bloques.",
+        puntos: [
+          "Usar variables, condicionales y bucles.",
+          "Incorporar sprites, sonidos y eventos.",
+          "Aplicar control mediante sensores o entradas."
+        ],
+        image: "img/tema42.jpg"
+      },
+      development: {
+presentationIframe: [
+    "https://www.picuino.com/es/scratch3-index.html",
+    "https://machinelearningforkids.co.uk/#!/worksheets"],
+note: "1) Turotial de Scratch. Carlos Félix Pardo Martín. Licencia CC BY-SA 4.0.<br>2)Worksheets Machine Learning for Kids. Disponible en <a href='https://machinelearningforkids.co.uk/' target='_blank'>machinelearningforkids.co.uk</a>."  
+      },
+      news: [
+        {
+          titulo: "Scratch",
+          descripcion: "Un lenguaje de programacion para todas las edades.",
+          enlace: "https://www.laverdad.es/ababol/ciencia/scratch-lenguaje-programacion-20190119004611-ntvo.html",
+          pregunta: "¿Qué tipo de entorno de programación es Scratch?",
+          opciones: [
+            "Gráfico por bloques",
+            "Texto en Java",
+            "Código ensamblador",
+            "C++ orientado a objetos"
+          ],
+          correcta: 0
+        }
+      ],
+      quiz: [
+        { pregunta: "¿Qué bloque repetiría una acción indefinidamente?", opciones: ["por siempre", "repetir 10", "esperar 1 seg", "si-entonces"], correcta: 0 },
+        { pregunta: "En Scratch, una ‘variable’ sirve para…", opciones: ["Almacenar datos", "Repetir bucles", "Mover sprites", "Cambiar fondos"], correcta: 0 }
+      ]
+    },
+    {
+      id: "makecode-arcade",
+      title: "Videojuegos retro con MakeCode Arcade",
+      description: "Diseña y programa videojuegos 2D tipo arcade con sprites, colisiones y puntuaciones.",
+      image: "img/intro43.jpg",
+      intro: {
+        motivacion: "Crea videojuegos retro con estética y mecánicas clásicas.",
+        curiosidad: "¿Podrías programar un juego con niveles y vidas?",
+        criterios: [
+          "1.1 Identificar la solución óptima de un problema planteado, proponiendo diferentes alternativas a través del pensamiento computacional, y seleccionando de manera argumentada la mejor de ellas.",
+          "1.2 Analizar los diferentes niveles de los lenguajes de programación, distinguiendo las características, necesidad, conveniencia y aplicación de cada uno de ellos.",
+          "2.1 Utilizar con destreza un entorno de programación gráfica por bloques, enfocando sus potencialidades hacia la generación de juegos y animaciones para ordenadores y otros dispositivos digitales, seleccionando las herramientas más apropiadas para generar nuevo contenido digital de manera creativa, respetando derechos de autor y licencias."
+        ],
+        contenidos: [
+          "Interfaz de MakeCode Arcade.",
+          "Diseño de sprites y fondos.",
+          "Programación de mecánicas: movimiento, colisiones, puntuaciones y temporizadores.",
+          "Uso de funciones y arrays simples.",
+          "Publicación y exportación de videojuegos."
+        ]
+      },
+      summary: {
+        texto: "Aprenderás a crear videojuegos retro en MakeCode Arcade, programando sprites, mecánicas y sistemas de puntuación.",
+        puntos: [
+          "Diseñar sprites y fondos personalizados.",
+          "Programar colisiones y físicas básicas.",
+          "Gestionar vidas y niveles."
+        ],
+        image: "img/tema43.jpg"
+      },
+      development: {
+        presentationIframe: "https://view.genially.com/64ca324dc4c807001173a6ec/interactive-image-european-game-jam",
+        note: "OBO - We Teach Robotics. Erasmus+. Proyecto con Makecode Arcade: EU Game Jam. Disponible en <a href='https://www.weteachrobotics.com' target='_blank'>weteachrobotics.com</a>."
+      },
+      news: [
+        {
+          titulo: "Microsoft Makecode Arcade",
+          descripcion: "Todo lo que necesitas saber sobre este editor de código online gratuito.",
+          enlace: "https://windowsreport.com/microsoft-makecode-arcade-everything-you-need-to-know-about-this-free-online-code-editor/",
+          pregunta: "¿Qué tipo de juegos se crean en MakeCode Arcade?",
+          opciones: [
+            "Videojuegos 2D tipo arcade",
+            "Simulaciones 3D",
+            "Aplicaciones móviles",
+            "Procesadores de texto"
+          ],
+          correcta: 0
+        }
+      ],
+      quiz: [
+        { pregunta: "Un ‘sprite’ es…", opciones: ["Un objeto gráfico en pantalla", "Una variable", "Un bucle", "Un evento"], correcta: 0 },
+        { pregunta: "¿Qué bloque detecta una colisión entre sprites?", opciones: ["on overlap", "if score", "set life", "forever"], correcta: 0 }
+      ]
+    },
+    {
+      id: "app-inventor",
+      title: "Creación de apps móviles con App Inventor",
+      description: "Programa aplicaciones móviles con interfaz gráfica, sensores y conexión a Internet.",
+      image: "img/intro44.jpg",
+      intro: {
+        motivacion: "Desarrolla tu primera app para móviles Android.",
+        curiosidad: "¿Podrías crear una app que use el GPS y la cámara a la vez?",
+        criterios: [
+          "1.1 Identificar la solución óptima de un problema planteado, proponiendo diferentes alternativas a través del pensamiento computacional, y seleccionando de manera argumentada la mejor de ellas.",
+          "2.2 Desarrollar, programar y publicar aplicaciones -apps- en entornos de programación por bloques para dispositivos móviles, seleccionando las herramientas más apropiadas para generar contenido digital de modo creativo, respetando derechos de autor y licencias."
+        ],
+        contenidos: [
+          "Entorno de App Inventor: diseñador y editor de bloques.",
+          "Variables, procedimientos y eventos.",
+          "Uso de sensores: cámara, GPS, acelerómetro.",
+          "Simulación, depuración y publicación.",
+          "Licencias y autoría."
+        ]
+      },
+      summary: {
+        texto: "Crearás una app móvil con App Inventor que utilice sensores y permita la interacción con el usuario.",
+        puntos: [
+          "Diseñar interfaz gráfica con componentes interactivos.",
+          "Programar eventos y procedimientos.",
+          "Integrar sensores del móvil."
+        ],
+        image: "img/tema44.jpg"
+      },
+      development: {
+        presentationIframe: "https://www.profedeinformatica.es/app-inventor/conceptos-previos",
+        note: "Material elaborado por Justo Rodríguez Orta. Disponible en <a href='https://www.profedeinformatica.es/' target='_blank'>profedeinformatica.es</a>."
+      },
+      news: [
+        {
+          titulo: "Corrige Fácil",
+          descripcion: "Jóvenes termenses crean una app para mejorar la evaluación docente",
+          enlace: "https://www.elliberal.com.ar/nota/52658/2025/07/jovenes-termenses-crean-una-app-para-mejorar-la-evaluacion-docente",
+          pregunta: "¿Qué sistema operativo soporta App Inventor?",
+          opciones: ["Android", "iOS", "Windows", "Linux"],
+          correcta: 0
+        }
+      ],
+      quiz: [
+        { pregunta: "En App Inventor, un ‘evento’ es…", opciones: ["Una acción que ocurre y ejecuta código", "Un sprite", "Un bucle", "Una variable"], correcta: 0 },
+        { pregunta: "¿Qué sensor detecta la orientación del móvil?", opciones: ["Acelerómetro", "GPS", "Cámara", "Micrófono"], correcta: 0 }
+      ]
+    },
+    {
+      id: "processing",
+      title: "Programación multimedia con Processing",
+      description: "Lenguaje textual para crear gráficos, animaciones y proyectos interactivos.",
+      image: "img/intro45.jpg",
+      intro: {
+        motivacion: "Da el salto a la programación textual creando animaciones y juegos en 2D.",
+        curiosidad: "¿Sabías que Processing se usa en arte digital y visualización de datos?",
+        criterios: [
+          "1.1 Identificar la solución óptima de un problema planteado, proponiendo diferentes alternativas a través del pensamiento computacional, y seleccionando de manera argumentada la mejor de ellas.",
+          "1.2 Analizar los diferentes niveles de los lenguajes de programación, distinguiendo las características, necesidad, conveniencia y aplicación de cada uno de ellos.",
+          "3.1 Desarrollar programas en el lenguaje de programación textual de código abierto Processing, gestionando sus potencialidades multimedia, exportando sus archivos finales y depurando los posibles errores sobrevenidos en el diseño del código, atendiendo además a derechos de autor y licencias de uso."
+        ],
+        contenidos: [
+          "Sintaxis, variables y tipos de datos.",
+          "Estructuras de control: condicionales, bucles, funciones.",
+          "Arrays, objetos y funciones propias.",
+          "Carga y uso de imágenes, sonidos y animaciones.",
+          "Depuración y exportación de proyectos."
+        ]
+      },
+      summary: {
+        texto: "Aprenderás a programar en Processing creando gráficos y animaciones interactivas con código textual.",
+        puntos: [
+          "Usar variables, funciones y estructuras de control.",
+          "Crear y mover objetos en pantalla.",
+          "Integrar imágenes y sonidos."
+        ],
+        image: "img/tema45.jpg"
+      },
+      development: {
+        presentationIframe: "https://sites.google.com/site/mdgftecnologiacuarto/processing",
+        note: "Pocessing. Disponible en <a href='https://sites.google.com/site/mdgftecnologiacuarto/home' target='_blank'>sites.google.com/site/mdgftecnologiacuarto/home</a>."
+      },
+      news: [
+        {
+          titulo: "Processing",
+          descripcion: "El lenguaje para no programadores.",
+          enlace: "https://www.pabloyglesias.com/processing-el-lenguaje-para-no-programadores/",
+          pregunta: "¿En qué lenguaje está basado Processing?",
+          opciones: ["Java", "Python", "C++", "JavaScript"],
+          correcta: 0
+        }
+      ],
+      quiz: [
+        { pregunta: "La función setup() en Processing se ejecuta…", opciones: ["Una vez al inicio", "En cada frame", "Cada segundo", "Cuando se pulsa una tecla"], correcta: 0 },
+        { pregunta: "¿Qué función dibuja un círculo?", opciones: ["ellipse()", "circle()", "drawCircle()", "oval()"], correcta: 0 }
       ]
     }
   ]
@@ -4641,7 +4857,22 @@ function showDevelopment() {
   const iframesHTML = embeds.map((url, i) => `
     <section class="mb-8">
       ${embeds.length > 1 ? `<h4 class="text-xl font-semibold mb-2">Presentación ${i+1}</h4>` : ``}
-      <iframe src="${url}" class="presentation-iframe" frameborder="0" allowfullscreen title="Presentación ${i+1}"></iframe>
+      <div class="flex items-center gap-3 mb-3">
+        <a href="${url}" target="_blank" rel="noopener" class="bg-purple-600 text-white px-3 py-2 rounded-lg hover:opacity-90">
+          🔗 Abrir en pestaña nueva
+        </a>
+        <span class="text-sm text-gray-500">Si la vista incrustada falla, usa el enlace.</span>
+      </div>
+      <iframe src="${url}"
+              class="presentation-iframe"
+              frameborder="0"
+              allowfullscreen
+              title="Presentación ${i+1}"
+              onload="this.dataset.loaded='1'"></iframe>
+      <div class="mt-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded p-3">
+        ⚠️ Algunos sitios (Google Sites, ciertos blogs) impiden mostrarse dentro de otras páginas. 
+        Si el recuadro de arriba aparece vacío, haz clic en <strong>“Abrir en pestaña nueva”</strong>.
+      </div>
     </section>
   `).join('');
 
@@ -4657,7 +4888,6 @@ function showDevelopment() {
     </div>
   `;
 }
-
 
 
 
@@ -4932,8 +5162,6 @@ document.getElementById('presentationNote').innerHTML = tema.development.note ||
   </script>
 </body>
 </html>
-
-
 
 
 
